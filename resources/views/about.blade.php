@@ -1,0 +1,61 @@
+@extends('layouts.app')
+
+@section('content')
+    <x-content-section>
+        <x-slot name="title">
+            About Me
+        </x-slot>
+
+        <x-slot name="content">
+            <p>
+                Web Design has been my main interest since 2001/2002 when as a young twelve or thirteen year old I
+                frequented one of the early Harry Potter fansites and wanted to make my own, my first websites were rubbish,
+                but I never gave up, over the next year or so I started learning HTML and the then normal table based
+                layouts, then when I turned 15 and did my Work Experience through school I started learning PHP and MySQL,
+                when table layouts started dying out in the mid-to-late 2000s I started learning CSS and making my first DIV
+                based layouts, and since then I have always kept learning.
+            </p>
+            <p>
+                <jp-image src="{{ asset('assets/images/laravel-logo.png') }}" alt="Laravel" :zoomable="false"
+                          classes="w-1/3 max-w-200px float-right ml-2 my-2"></jp-image>
+                Within the past 5 years or so I started learning more Object Orientated PHP an applying to to my projects,
+                and later within the last couple of years I started learning and using Laravel more, which I have now become
+                a bit of an enthusiast for, and I have also been using TDD with my Laravel projects.
+            </p>
+            <p>
+                Coupled with learning Laravel I have also started using Tailwind CSS more instead of writing my own
+                traditional CSS files, and I have also learnt the Vue Javascript framework and started adopting this into my
+                own projects too.
+            </p>
+            <p>
+                Over the past few years I've come to the conclusion that I prefer the development side of Web Applications,
+                writing the code that powers the software behind the scenes rather than the front end and the look and feel,
+                but I am capable of working on the front end too, but my passion is as a back end developer.
+            </p>
+            <p>
+                Outside of Web Development my other main interests include photography, whenever I am out with my Fiancee
+                and her family I always have my camera with me, I use a combination of Adobe Lightroom and Adobe Photoshop
+                to post-process my photos, then the very best end up on my
+                <a href="http://www.flickr.com/photos/jpeters889/sets" target="_blank">Flickr Stream</a>.
+            </p>
+            <p>
+                <jp-image src="{{ asset('assets/images/zipslide.jpg') }}" alt="Me (With arms raised) on the zipslide"
+                          classes="w-1/2 max-w-300px float-left mr-2 my-2"></jp-image>
+                I also love to travel, which helps with my photography and attending concerts all over the country, I'm also
+                a little bit of an adrenaline junkie, I love Roller Coasters and thrill rides, along with my mother in law I
+                completed the <a href="https://www.zipworld.co.uk/adventure/velocity" target="_blank">Velocity 2</a> zip
+                wire at Penrhyn Quarry in North Wales, the fastest zipslide in the world at over 100mph, and the longest in
+                Europe, in the process we raised over £1,600 for the Critical Care Unit at Royal Stoke Hospital after my
+                <jp-image src="{{ asset('assets/images/zipslide-cheque.jpg') }}"
+                          alt="My partner (far left), me, and my mother in law (middle) with staff in the Critical Care ward at Royal Stoke Hopistal handing a cheque over for over £1600"
+                          classes="w-1/2 max-w-300px float-right ml-2 my-2"></jp-image>
+                father in law spent a considerable amount of time there following a severe Stroke, I have also always wanted
+                to do a bungee jump or skydive, but unfortunately I have never had the opportunity... <strong>yet</strong>.
+            </p>
+            <p>
+                I am also a music lover, particularly rock and the punk/pop punk sub genre's, I have been playing guitar
+                since Christmas 2009 and attend a lot of concerts to see my favourite bands live.
+            </p>
+        </x-slot>
+    </x-content-section>
+@endsection

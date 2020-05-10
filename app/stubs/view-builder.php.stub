@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Carbon\Carbon;
+use JPeters\PageViewBuilder\Page;
+
+class WelcomeController extends Controller
+{
+    public function get(Page $page)
+    {
+        return $page->setPageTitle('Welcome')
+            ->setMetaDescription('Welcome to my Laravel App')
+            ->render('app', [
+               'date' => Carbon::now(),
+            ]);
+    }
+}

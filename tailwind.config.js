@@ -3,7 +3,12 @@ const colours = {
     current: 'currentColor',
 
     black: '#000',
+    'black-80': 'rgba(0,0,0,0.8)',
+
     white: '#fff',
+    'white-80': 'rgba(255,255,255,0.8)',
+    'white-60': 'rgba(255,255,255,0.6)',
+    'white-10': 'rgba(255,255,255,0.1)',
 
     gray: {
         100: '#f7fafc',
@@ -47,8 +52,9 @@ const colours = {
         600: '#3182ce',
         700: '#2b6cb0',
         800: '#2c5282',
-        900: '#2a4365',
+        900: '#1f4e79',
     },
+    'blue-900-05': 'rgba(31, 78, 121, 0.05)'
 };
 
 const widths = {
@@ -82,6 +88,10 @@ const widths = {
     '98': '98%',
     full: '100%',
     screen: '100vw',
+    '200px': '200px',
+    '300px': '300px',
+    'modal-small': '700px',
+    'modal': '1000px',
 }
 
 const spacing = {
@@ -117,11 +127,8 @@ module.exports = {
     separator: ':',
     theme: {
         screens: {
-            xs: '500px',
             sm: '600px',
-            md: '750px',
             lg: '900px',
-            xl: '1200px',
         },
         colors: colours,
         spacing: spacing,
@@ -198,6 +205,7 @@ module.exports = {
         },
         fontFamily: {
             sans: 'Open Sans',
+            serif: 'Rock Salt',
         },
         fontSize: {
             xs: '0.75rem',
@@ -227,6 +235,9 @@ module.exports = {
             ...spacing,
             full: '100%',
             screen: '100vh',
+            '3/4': '75%',
+            '11/12': '91.666667%',
+            '95%': '95%',
         }),
         inset: {
             '0': '0',
@@ -269,6 +280,8 @@ module.exports = {
         maxHeight: {
             full: '100%',
             screen: '100vh',
+            '3/4': '75%',
+            '11/12': '91.666667%',
         },
         maxWidth: (theme, {breakpoints}) => ({
             ...widths,
@@ -278,6 +291,7 @@ module.exports = {
             '0': '0',
             full: '100%',
             screen: '100vh',
+            '1/2': '50%',
         },
         minWidth: {
             '0': '0',

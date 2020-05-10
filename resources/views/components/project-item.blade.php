@@ -1,0 +1,14 @@
+@props(['title', 'url', 'text'])
+
+<div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow-lg">
+    <div class="mb-3 text-blue-900 font-semibold border-b border-blue-900 pb-2 text-center sm:text-left">
+        <h2 class="text-2xl">{{ $title }}</h2>
+        <h3>
+            <a href="{{ $url }}" target="_blank"
+               class="text-black hover:text-blue-900 break-words">{{ $text }}</a>
+        </h3>
+    </div>
+    <div>
+        {{ $slot }}
+    </div>
+</div>

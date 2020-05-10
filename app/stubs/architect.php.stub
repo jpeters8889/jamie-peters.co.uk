@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Architect\Blueprints;
+
+use App\User as UserModel;
+use JPeters\Architect\Blueprints\Blueprint;
+use JPeters\Architect\Plans\DateTime;
+use JPeters\Architect\Plans\Password;
+use JPeters\Architect\Plans\Textfield;
+
+class User extends Blueprint
+{
+    public function model(): string
+    {
+        return UserModel::class;
+    }
+
+    public function plans(): array
+    {
+        return [
+            new Textfield('name'),
+
+            new Textfield('email'),
+
+            (new Password('password'))->hideOnIndex(),
+
+            (new DateTime('created_at'))->hideOnForms(),
+        ];
+    }
+}

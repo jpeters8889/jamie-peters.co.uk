@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use JPeters\PageViewBuilder\PageViewBuilderServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {

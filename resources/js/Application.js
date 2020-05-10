@@ -1,7 +1,8 @@
 import Vue from 'vue';
-import Toasted from 'vue-toasted';
-import request from "./Utilities/RequestHandler";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import vToolTip from "v-tooltip";
+import PortalVue from "portal-vue";
+import Turbolinks from "turbolinks";
 
 export default class Application {
 
@@ -11,10 +12,11 @@ export default class Application {
     }
 
     build() {
-        this.afterBoot();
+        Turbolinks.start();
 
         Vue.component('font-awesome-icon', FontAwesomeIcon);
-        Vue.use(Toasted);
+        Vue.use(vToolTip);
+        Vue.use(PortalVue);
 
         this.app = new Vue({
             el: '#app',
@@ -22,25 +24,5 @@ export default class Application {
                 //
             }
         });
-    }
-
-    request() {
-        return request;
-    }
-
-    $on(event, callback) {
-        this.vue.$on(event, callback);
-    }
-
-    $emit(event,...args) {
-        this.vue.$emit(event,...args)
-    }
-
-    success(message) {
-        Vue.toasted.show(message, {type: 'success'});
-    }
-
-    error(message) {
-        Vue.toasted.show(message, {type: 'error'});
     }
 }
