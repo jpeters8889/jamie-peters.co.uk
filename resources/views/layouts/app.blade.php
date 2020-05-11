@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ mix('assets/css/app.css') }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css" />
 
+    <link rel="icon" href="{{ asset('/assets/favicon.ico') }}" type="image/x-icon" />
+
     <script src="{{ mix('/assets/js/manifest.js') }}"></script>
     <script src="{{ mix('/assets/js/vendor.js') }}"></script>
     <script src="{{ mix('/assets/js/app.js') }}"></script>
