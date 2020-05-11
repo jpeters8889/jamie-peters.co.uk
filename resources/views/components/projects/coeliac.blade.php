@@ -28,8 +28,8 @@
         This newest rebuild has seen all images moved onto Amazon S3 for easier storage, and the current
         plan is to host the website on AWS using Laravel Vapor.
     </p>
-    <p>
-        Access to the private repository can be given on request, and dependent on the state of the
+    <!--<p>
+        The rebuild is currently stored in a private repository,  can be given on request, and dependent on the state of the
         project timeline, the project may be able to be viewed on a development server.
-    </p>
+    </p>-->
 </x-project-item>
