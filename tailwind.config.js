@@ -120,7 +120,9 @@ const spacing = {
 }
 
 module.exports = {
-    purge: [],
+    purge: [
+        './resources/**/*.*'
+    ],
     target: 'relaxed',
     prefix: '',
     important: false,

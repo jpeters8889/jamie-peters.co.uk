@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Spatie\Snapshots\Drivers\HtmlDriver;
 use Spatie\Snapshots\MatchesSnapshots;
 use Tests\TestCase;
 
@@ -14,7 +15,7 @@ class PageSnapshotTest extends TestCase
     {
         $content = $this->get('/')->content();
 
-        $this->assertMatchesSnapshot($content);
+        $this->assertMatchesSnapshot($content, new HtmlDriver());
     }
 
     /** @test */
@@ -22,7 +23,7 @@ class PageSnapshotTest extends TestCase
     {
         $content = $this->get('/about')->content();
 
-        $this->assertMatchesSnapshot($content);
+        $this->assertMatchesSnapshot($content, new HtmlDriver());
     }
 
     /** @test */
@@ -30,6 +31,6 @@ class PageSnapshotTest extends TestCase
     {
         $content = $this->get('/projects')->content();
 
-        $this->assertMatchesSnapshot($content);
+        $this->assertMatchesSnapshot($content, new HtmlDriver());
     }
 }
