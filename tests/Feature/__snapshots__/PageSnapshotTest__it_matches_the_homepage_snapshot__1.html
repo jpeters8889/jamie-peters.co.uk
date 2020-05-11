@@ -130,9 +130,21 @@
     <portal-target name="modal"></portal-target>
 </div>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110429316-1"></script>
 <script>
     app().build();
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110429316-1');
 </script>
+
 
 </body>
 </html>

@@ -117,9 +117,11 @@
         </div>
 
          <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
-    <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
-    <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">Below are some images related to this project, images can be clicked to enlarge them.</p>
-    <div class="flex flex-wrap">
+            <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
+        <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">
+            Below are some images related to this project, images can be clicked to enlarge them.
+        </p>
+        <div class="flex flex-wrap">
         <div class="flex flex-col p-2 max-w-300px">
     <div class="bg-white-60 p-2 shadow">
         <jp-image src="http://jamie-peters.test/assets/images/coeliac-current.png" alt="The current Live version of Coeliac Sanctuary, which is using a custom PHP MVC Framework"></jp-image>
@@ -175,9 +177,11 @@
         </div>
 
          <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
-    <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
-    <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">Below are some images related to this project, images can be clicked to enlarge them.</p>
-    <div class="flex flex-wrap">
+            <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
+        <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">
+            Below are some images related to this project, images can be clicked to enlarge them.
+        </p>
+        <div class="flex flex-wrap">
         <div class="flex flex-col p-2 max-w-300px">
     <div class="bg-white-60 p-2 shadow">
         <jp-image src="http://jamie-peters.test/assets/images/architect-list.png" alt="The tabular list of all records built from a Blueprint"></jp-image>
@@ -325,9 +329,21 @@
     <portal-target name="modal"></portal-target>
 </div>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110429316-1"></script>
 <script>
     app().build();
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110429316-1');
 </script>
+
 
 </body>
 </html>
