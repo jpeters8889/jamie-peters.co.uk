@@ -22,7 +22,9 @@
                 type: String,
                 default: '',
             },
-            classes: {},
+            classes: {
+                default: '',
+            },
             zoomable: {
                 type: Boolean,
                 default: () => true,

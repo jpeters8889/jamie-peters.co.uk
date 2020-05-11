@@ -13,14 +13,14 @@
 
 
 
-    <link rel="stylesheet" href="/assets/css/app.css?id=89be9d8c195aa2ba99ad">
+    <link rel="stylesheet" href="/assets/css/app.css?id=4958844cef1097a3346c">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
 
     <link rel="icon" href="http://jamie-peters.test/assets/favicon.ico" type="image/x-icon">
 
-    <script src="/assets/js/manifest.js?id=2a63a316ce6930dfc4cb"></script>
-    <script src="/assets/js/vendor.js?id=992988360fc814cb228b"></script>
-    <script src="/assets/js/app.js?id=50c34568f7e8d5e43654"></script>
+    <script src="/assets/js/manifest.js?id=7fc7283078029a2e8be6"></script>
+    <script src="/assets/js/vendor.js?id=364af69c43881e5177be"></script>
+    <script src="/assets/js/app.js?id=7294624c6cb972447a57"></script>
 </head>
 <body class="bg-gray-300 min-h-screen">
 
@@ -86,35 +86,60 @@
         </h3>
     </div>
     <div>
-        <p>
-        <jp-image src="http://jamie-peters.test/assets/images/coeliac-current.png" alt="Coeliac Sanctuary - Current Live version using a custom PHP MVC Framework" classes="w-1/2 max-w-200px float-left mr-2 my-2"></jp-image>
-        Coeliac Sanctuary is my fiancee&rsquo;s business, it was originally started in August 2014 as just
-        Gluten Free blog for the Coeliac community, along with recipes, places to eat guide and reviews.
-    </p>
-    <p>
-        Later in 2016 I created an online shop for the website, using raw vanilla PHP and utilising the
-        Stripe and PayPal APIs for handling payments.
-    </p>
-    <p>
-        A basic mobile app was created using Phone Gap, primarily for the places to eat section on the
-        website, to display places in our database on a map around the users location. The app was
-        originally written in basic HTML, SCSS and JQuery.
-    </p>
-    <p>
-        <jp-image src="http://jamie-peters.test/assets/images/coeliac-new.png" alt="The new version of Coeliac Sanctuary currently in development using Laravel, Tailwind CSS and Vue." classes="w-1/2 max-w-200px float-right ml-2 my-2"></jp-image>
-        I am currently in the process of a creating new major version of the website, including
-        rewriting all the code from scratch using TDD and the Laravel Framework along with Tailwind CSS
-        and Vue Components, also creating a new MySQL data structure for the website and writing scripts
-        to import and migrate the existing data structure into the new Laravel version.
-    </p>
-    <p>
-        This newest rebuild has seen all images moved onto Amazon S3 for easier storage, and the current
-        plan is to host the website on AWS using Laravel Vapor.
-    </p>
-    <!--<p>
-        The rebuild is currently stored in a private repository,  can be given on request, and dependent on the state of the
-        project timeline, the project may be able to be viewed on a development server.
-    </p>-->
+        <div class="flex flex-col">
+        <div class="flex-1">
+            <p>
+                Coeliac Sanctuary is my fiancee&rsquo;s business, it was originally started in August 2014 as just
+                Gluten Free blog for the Coeliac community, along with recipes, places to eat guide and reviews.
+            </p>
+            <p>
+                Later in 2016 I created an online shop for the website, using raw vanilla PHP and utilising the
+                Stripe and PayPal APIs for handling payments.
+            </p>
+            <p>
+                A basic mobile app was created using Phone Gap, primarily for the places to eat section on the
+                website, to display places in our database on a map around the users location. The app was
+                originally written in basic HTML, SCSS and JQuery.
+            </p>
+            <p>
+                I am currently in the process of a creating new major version of the website, including
+                rewriting all the code from scratch using TDD and the Laravel Framework along with Tailwind CSS
+                and Vue Components, also creating a new MySQL data structure for the website and writing scripts
+                to import and migrate the existing data structure into the new Laravel version.
+            </p>
+            <!--<p>
+                This newest rebuild has seen all images moved onto Amazon S3 for easier storage.
+            </p>
+            <p>
+                The rebuild is currently stored in a private repository,  can be given on request, and dependent on the state of the
+                project timeline, the project may be able to be viewed on a development server.
+            </p>-->
+        </div>
+
+         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
+    <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
+    <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">Below are some images related to this project, images can be clicked to enlarge them.</p>
+    <div class="flex flex-wrap">
+        <div class="flex flex-col p-2 max-w-300px">
+    <div class="bg-white-60 p-2 shadow">
+        <jp-image src="http://jamie-peters.test/assets/images/coeliac-current.png" alt="The current Live version of Coeliac Sanctuary, which is using a custom PHP MVC Framework"></jp-image>
+
+        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The current Live version of Coeliac Sanctuary, which is using a custom PHP MVC Framework</p>
+    </div>
+</div>
+ 
+
+             <div class="flex flex-col p-2 max-w-300px">
+    <div class="bg-white-60 p-2 shadow">
+        <jp-image src="http://jamie-peters.test/assets/images/coeliac-new.png" alt="The new version of Coeliac Sanctuary currently in development using Laravel, Tailwind CSS and Vue."></jp-image>
+
+        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The new version of Coeliac Sanctuary currently in development using Laravel, Tailwind CSS and Vue.</p>
+    </div>
+</div>
+    </div>
+</div>
+ 
+    </div>
     </div>
 </div>
  
@@ -128,28 +153,54 @@
         </h3>
     </div>
     <div>
-        <p>
-        <jp-image src="http://jamie-peters.test/assets/images/architect-list.png" alt="The tabular list of all records built from a Blueprint" classes="w-1/2 max-w-200px float-left mr-2 my-2"></jp-image>
-        Architect is a Laravel Admin Package I am currently developing as a Vue SPA and using TDD for the Laravel/API
-        side. Architect was originally created as an admin panel for the new Coeliac Sanctuary rebuild, since other
-        Laravel admin packages didn&rsquo;t quite suit my needs I decided to create my own but as an Open Source package.
-    </p>
-    <p>
-        Architect is controlled using a concept I have created called Blueprints and Plans, a Blueprint links to a
-        model, and each Plan then links to the columns in the model using text fields and other form elements.
-    </p>
-    <p>
-        <jp-image src="http://jamie-peters.test/assets/images/architect-form.png" alt="The form generated from a Blueprint to edit a blog." classes="w-1/2 max-w-200px float-right ml-2 my-2"></jp-image>
-        Below is a basic example of a Blueprint, the Blueprint is for a User Model and includes for plans for the users
-        name, email, password and created at timestamp. The password and created at plans also have modifiers on them to
-        hide it on the index view, and hide it on the form view respectively.
-    </p>
-    <p>
-        Architect will use this Blueprint and render a tabular list of the users in the application and display their
-        name, email and the date they were created, and then the and edit forms will render inputs for their name, email
-        and password.
-    </p>
-     <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
+        <div class="flex flex-col">
+        <div class="flex-1">
+            <p>
+                Architect is a Laravel Admin Package I am currently developing as a Vue SPA and using TDD for the
+            </p>
+<p>
+                Architect is controlled using a concept I have created called Blueprints and Plans, a Blueprint links to
+                a model, and each Plan then links to the columns in the model using text fields and other form elements.
+            </p>
+            <p>
+                Below is a basic example of a Blueprint, the Blueprint is for a User Model and includes for plans for
+                the users name, email, password and created at timestamp. The password and created at plans also have
+                modifiers on them to hide it on the index view, and hide it on the form view respectively.
+            </p>
+            <p>
+                Architect will use this Blueprint and render a tabular list of the users in the application and display
+                their name, email and the date they were created, and then the and edit forms will render inputs for
+                their name, email and password.
+            </p>
+        </div>
+
+         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
+    <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
+    <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">Below are some images related to this project, images can be clicked to enlarge them.</p>
+    <div class="flex flex-wrap">
+        <div class="flex flex-col p-2 max-w-300px">
+    <div class="bg-white-60 p-2 shadow">
+        <jp-image src="http://jamie-peters.test/assets/images/architect-list.png" alt="The tabular list of all records built from a Blueprint"></jp-image>
+
+        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The tabular list of all records built from a Blueprint</p>
+    </div>
+</div>
+ 
+
+             <div class="flex flex-col p-2 max-w-300px">
+    <div class="bg-white-60 p-2 shadow">
+        <jp-image src="http://jamie-peters.test/assets/images/architect-form.png" alt="The form generated from a Blueprint to edit a blog."></jp-image>
+
+        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The form generated from a Blueprint to edit a blog.</p>
+    </div>
+</div>
+    </div>
+</div>
+ 
+
+         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col p-2 shadow">
+    <h2 class="font-semibold text-2xl text-blue-900 leading-none mb-2">Code Sample</h2>
+    <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Blueprints</span>;
 
@@ -179,6 +230,9 @@
         ];
     }
 }</code></pre>
+</div>
+ 
+    </div>
     </div>
 </div>
  
@@ -205,7 +259,9 @@
         Below is a code sample from a Controller, specifying a page title and meta description and returning a welcome
         view.
     </p>
-     <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
+     <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col p-2 shadow">
+    <h2 class="font-semibold text-2xl text-blue-900 leading-none mb-2">Code Sample</h2>
+    <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
 
@@ -223,6 +279,7 @@
             ]);
     }
 }</code></pre>
+</div>
     </div>
 </div>
  
