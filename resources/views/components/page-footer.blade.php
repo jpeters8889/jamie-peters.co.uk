@@ -6,7 +6,7 @@
                 href="https://vuejs.org/" target="_blank">Vue</a>.
         </p>
         <p>
-            Hosted on AWS using <a href="https://vapor.laravel.com/" target="_blank">Laravel Vapor</a>.
+            Hosted on Digital Ocean using <a href="https://forge.laravel.com//" target="_blank">Laravel Forge</a>.
         </p>
     </div>
 </footer>
