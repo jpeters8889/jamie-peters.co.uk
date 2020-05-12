@@ -22,7 +22,7 @@
                         <jp-image src="{{ asset('assets/images/laravel-logo.png') }}" alt="Laravel" :zoomable="false"
                                   classes="w-1/3 max-w-200px float-right ml-2 my-2"></jp-image>
                         Within the past 5 years or so I started learning more Object Orientated PHP and applying that
-                        methodology to to my projects, and later within the last couple of years I started learning and
+                        methodology to my projects, and later within the last couple of years I started learning and
                         using Laravel more, which I have now become a bit of an enthusiast for, and it is my go to for
                         new projects, including using TDD where I can.
                     </p>
