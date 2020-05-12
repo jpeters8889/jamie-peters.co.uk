@@ -7,6 +7,7 @@
         <div class="flex-1">
             <p>
                 Architect is a Laravel Admin Package I am currently developing as a Vue SPA and using TDD for the
+                Laravel / API back end.
             <p>
                 Architect is controlled using a concept I have created called Blueprints and Plans, a Blueprint links to
                 a model, and each Plan then links to the columns in the model using text fields and other form elements.
