@@ -14,7 +14,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "jpeters/laravel-page-view": "dev-master",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "scrivo/highlight.php": "v9.18.1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
