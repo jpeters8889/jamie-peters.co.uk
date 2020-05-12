@@ -8,7 +8,7 @@
 
         <x-slot name="content">
             <p>
-                Below are a few examples of personal projects I have done or work on outside of employment.
+                Below are a few examples of personal projects I have done outside of employment.
             </p>
             <div class="flex flex-col">
                 <x-projects.coeliac></x-projects.coeliac>

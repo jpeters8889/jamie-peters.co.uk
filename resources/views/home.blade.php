@@ -8,8 +8,8 @@
 
         <x-slot name="content">
             <p>
-                Thank you for taking the time to visit my personal website and only portfolio, I am a passionate,
-                committed and enthusiastic web developer with 17 years experience in web design and development, I am an
+                Thank you for taking the time to visit my personal website and only portfolio. I am a passionate,
+                committed and enthusiastic web developer with 17 years experience in web design and development. I am an
                 enthusiast of the <a href="https://www.laravel.com" target="_blank">Laravel PHP Framework</a>, along
                 with<a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and<a href="https://vuejs.org/"
                                                                                               target="_blank">Vue</a>.
@@ -40,12 +40,12 @@
                 My preferred tech stack is Laravel with Tailwind CSS and Vue, and my IDE of choice is PhpStorm.
             </p>
             <p>
-                I am always interested in learning more, and I plan to learn more about AWS and using Laravel Vapor, and
-                I am planning on looking into Laravel Livewire, and hopefully to start contributing to open source
+                I am always eager to learn more, and I plan expand my knowledge by learning AWS and the use of Laravel Vapor.
+                I am intending to look into Laravel Livewire, and hopefully to start contributing to open source
                 software more.
             </p>
             <p>
-                I have a Laracasts subscription and regularly access the website and watch all new videos when posted.
+                I have a Laracasts subscription and regularly access the website and watch all new videos available.
             </p>
         </x-slot>
     </x-content-section>
