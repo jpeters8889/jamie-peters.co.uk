@@ -695,12 +695,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jpeters8889/laravel-page-builder.git",
-                "reference": "d30d9cd9668c46ec4f12543fc5dd0e4af940d492"
+                "reference": "b9e65723389a717ded7ccc1071108ed9fd2b875a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jpeters8889/laravel-page-builder/zipball/d30d9cd9668c46ec4f12543fc5dd0e4af940d492",
-                "reference": "d30d9cd9668c46ec4f12543fc5dd0e4af940d492",
+                "url": "https://api.github.com/repos/jpeters8889/laravel-page-builder/zipball/b9e65723389a717ded7ccc1071108ed9fd2b875a",
+                "reference": "b9e65723389a717ded7ccc1071108ed9fd2b875a",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +743,7 @@
                 "source": "https://github.com/jpeters8889/laravel-page-builder/tree/master",
                 "issues": "https://github.com/jpeters8889/laravel-page-builder/issues"
             },
-            "time": "2020-05-09T14:17:32+00:00"
+            "time": "2020-05-12T11:31:49+00:00"
         },
         {
             "name": "laravel/framework",
