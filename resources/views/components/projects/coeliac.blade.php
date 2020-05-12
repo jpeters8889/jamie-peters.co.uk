@@ -2,23 +2,26 @@
     <div class="flex flex-col">
         <div class="flex-1">
             <p>
-                Coeliac Sanctuary is my fiancee’s business, it was originally started in August 2014 as just
-                Gluten Free blog for the Coeliac community, along with recipes, places to eat guide and reviews.
+                Coeliac Sanctuary is my fiancees business, it was originally started in August 2014 as just
+                Gluten Free blog for the Coeliac community, along with recipes, places to eat guide and reviews. It is
+                currently powered by a custom built PHP MVC Framework utilising Twig templates and jQuery on the front
+                end.
             </p>
             <p>
-                Later in 2016 I created an online shop for the website, using raw vanilla PHP and utilising the
+                Later in 2016 I created an online shop for the website, still using raw vanilla PHP and utilising the
                 Stripe and PayPal APIs for handling payments.
             </p>
             <p>
-                A basic mobile app was created using Phone Gap, primarily for the places to eat section on the
-                website, to display places in our database on a map around the users location. The app was
-                originally written in basic HTML, SCSS and JQuery.
+                A basic mobile app was created using Phone Gap, primarily linking to the eating out guide section on the
+                website, the app is used to display eateries in our database on an embedded Google map around the users
+                location. The app was originally written in basic HTML, SCSS and JQuery.
             </p>
             <p>
                 I am currently in the process of a creating new major version of the website, including
                 rewriting all the code from scratch using TDD and the Laravel Framework along with Tailwind CSS
-                and Vue Components, also creating a new MySQL data structure for the website and writing scripts
-                to import and migrate the existing data structure into the new Laravel version.
+                and Vue Components, I am also using this opportunity to create a new, more optimised MySQL data
+                structure for the website, which includes writing scripts to import and migrate the existing data
+                structure into the new Laravel version.
             </p>
             <!--<p>
                 This newest rebuild has seen all images moved onto Amazon S3 for easier storage.

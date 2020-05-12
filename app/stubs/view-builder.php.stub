@@ -11,7 +11,7 @@ class WelcomeController extends Controller
     {
         return $page->setPageTitle('Welcome')
             ->setMetaDescription('Welcome to my Laravel App')
-            ->render('app', [
+            ->render('welcome', [
                'date' => Carbon::now(),
             ]);
     }

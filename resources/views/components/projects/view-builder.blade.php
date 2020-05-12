@@ -7,9 +7,9 @@
         using the same functionality in other projects.
     </p>
     <p>
-        The idea is to be able to dependency inject the Page Builder class into the controller, and then the class can
-        be used to specify a page title, meta information etc and then return a fully rendered blade view in the
-        response with the appropriate data.
+        The idea is to be able to dependency inject the Page Builder class into a controller, and then the class can
+        be used to specify a page title, meta information etc and then return a fully rendered Blade view in the
+        response with any appropriate data.
     </p>
     <p>
         Below is a code sample from a Controller, specifying a page title and meta description and returning a welcome
