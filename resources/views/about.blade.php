@@ -11,8 +11,8 @@
                 <div>
                     <p>
                         Web Design has been my main interest since 2001/2002 when as a young twelve or thirteen year old
-                        I frequented one of the early Harry Potter fansites and wanted to make my own, my first websites
-                        were rubbish, but I never gave up, over the next year or so I started learning HTML and the then
+                        I frequented one of the early Harry Potter fansites and wanted to make my own. My first websites
+                        weren't great, but I never gave up. Over the next year or so I started learning HTML and the then
                         traditional table based layouts. Later, after I had turned 15, I did my Work Experience through
                         school with a home PHP Developer, and from there I started learning PHP and MySQL, when table
                         layouts started dying out in the mid-to-late 2000s I started learning CSS and making my first
@@ -34,7 +34,7 @@
                     <p>
                         Over the past few years I've come to the conclusion that I prefer the development side of Web
                         Applications, writing the code that powers the software behind the scenes rather than the front
-                        end and the look and feel, but I am capable of working on the front end too, but my passion is
+                        end and the look and feel, I am capable of working on the front end too, but my passion is
                         as a back end developer.
                     </p>
                     <p>
