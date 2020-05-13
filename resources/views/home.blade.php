@@ -8,7 +8,7 @@
 
         <x-slot name="content">
             <p>
-                Thank you for taking the time to visit my personal website and only portfolio. I am a passionate,
+                Thank you for taking the time to visit my personal website and portfolio. I am a passionate,
                 committed and enthusiastic web developer with 17 years experience in web design and development. I am an
                 enthusiast of the <a href="https://www.laravel.com" target="_blank">Laravel PHP Framework</a>, along
                 with<a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and<a href="https://vuejs.org/"
