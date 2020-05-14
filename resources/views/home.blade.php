@@ -45,7 +45,8 @@
                 source software more.
             </p>
             <p>
-                I have a Laracasts subscription and regularly access the website and watch all new videos available.
+                I have a <a href="https://laracasts.com/@jpeters8889" target="_blank">Laracasts</a> subscription and
+                regularly access the website and watch all new videos available.
             </p>
         </x-slot>
     </x-content-section>
