@@ -25,14 +25,14 @@
 <body class="bg-gray-300 min-h-screen">
 
 <div id="app" class="flex flex-col min-h-screen">
-     <header class="w-full bg-blue-900 text-white shadow-lg sticky top-0 p-2 flex flex-col sm:px-4">
+    <header class="w-full bg-blue-900 text-white shadow-lg sticky top-0 p-2 flex flex-col sm:px-4">
     <div class="main-wrapper">
         <div class="flex flex-col sm:flex-row">
             <div class="text-center sm:text-left sm:flex-1">
                 <h1 class="font-serif text-2xl text-shadow-md tracking-wider mb-1 sm:pl-2px lg:text-3xl">Jamie Peters</h1>
                 <h2 class="text-sm text-black font-semibold lg:text-base">Laravel / PHP / JavaScript Developer</h2>
             </div>
-             <div class="flex justify-center text-xl leading-none sm:height-0">
+            <div class="flex justify-center text-xl leading-none sm:height-0">
     <a href="mailto:jamie@jamie-peters.co.uk" class="p-2">
         <font-awesome-icon :icon="['fas', 'envelope']" v-tooltip="'Contact Me'"></font-awesome-icon>
     </a>
@@ -49,10 +49,9 @@
         <font-awesome-icon :icon="['fab', 'github']" v-tooltip="'GitHub'"></font-awesome-icon>
     </a>
 </div>
- 
         </div>
 
-         <nav>
+        <nav>
     <ul class="flex justify-center text-sm mt-2 font-semibold sm:justify-end lg:text-base">
         <li>
             <a class="p-2 bg-white-gradient transition-bg rounded-t-lg" href="/">Home</a>
@@ -65,20 +64,18 @@
         </li>
     </ul>
 </nav>
- 
     </div>
 </header>
- 
 
     <div class="main-wrapper flex-1">
-             <div class="content-section">
+            <div class="content-section">
     <h1 class="text-center sm:text-left">Personal Projects</h1>
 
     <p>
-                Below are a few examples of personal projects I have done or work on outside of employment.
+                Below are a few examples of personal projects I have done outside of employment.
             </p>
             <div class="flex flex-col">
-                 <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
+                <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
     <div class="mb-3 text-blue-900 font-semibold border-b border-blue-900 pb-2 text-center sm:text-left">
         <h2 class="text-2xl">Coeliac Sanctuary</h2>
         <h3>
@@ -89,207 +86,44 @@
         <div class="flex flex-col">
         <div class="flex-1">
             <p>
-                Coeliac Sanctuary is my fiancee&rsquo;s business, it was originally started in August 2014 as just
+                Coeliac Sanctuary is my fiancees business. It was originally started in August 2014 as just
                 Gluten Free blog for the Coeliac community, along with recipes, places to eat guide and reviews.
             </p>
             <p>
-                Later in 2016 I created an online shop for the website, using raw vanilla PHP and utilising the
+                Later in 2016 I created an online shop for the website, still using raw vanilla PHP and utilising the
                 Stripe and PayPal APIs for handling payments.
             </p>
             <p>
-                A basic mobile app was created using Phone Gap, primarily for the places to eat section on the
-                website, to display places in our database on a map around the users location. The app was
-                originally written in basic HTML, SCSS and JQuery.
+                A basic mobile app was created using Apache Cordova in 2017, primarily linking to the eating out guide
+                section on the website. The app is used to display eateries in the database on an embedded Google map
+                around the users location. The app was originally written in basic HTML, SCSS and JQuery.
             </p>
             <p>
-                I am currently in the process of a creating new major version of the website, including
-                rewriting all the code from scratch using TDD and the Laravel Framework along with Tailwind CSS
-                and Vue Components, also creating a new MySQL data structure for the website and writing scripts
-                to import and migrate the existing data structure into the new Laravel version.
-            </p>
-            <!--<p>
-                This newest rebuild has seen all images moved onto Amazon S3 for easier storage.
+                In 2020 a brand new version launched, completely rewritten from the ground up in Laravel using a test
+                driven approach and a fresh new data structure using laravel migrations and custom built commands to
+                transform the old legacy data structure and values into the new structure.
             </p>
             <p>
-                The rebuild is currently stored in a private repository,  can be given on request, and dependent on the state of the
-                project timeline, the project may be able to be viewed on a development server.
-            </p>-->
-        </div>
-
-         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
-            <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
-        <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">
-            Below are some images related to this project, images can be clicked to enlarge them.
-        </p>
-        <div class="flex flex-wrap">
-        <div class="flex flex-col p-2 max-w-300px">
-    <div class="bg-white-60 p-2 shadow">
-        <jp-image src="http://jamie-peters.test/assets/images/coeliac-current.png" alt="The current Live version of Coeliac Sanctuary, which is using a custom PHP MVC Framework"></jp-image>
-
-        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The current Live version of Coeliac Sanctuary, which is using a custom PHP MVC Framework</p>
-    </div>
-</div>
- 
-
-             <div class="flex flex-col p-2 max-w-300px">
-    <div class="bg-white-60 p-2 shadow">
-        <jp-image src="http://jamie-peters.test/assets/images/coeliac-new.png" alt="The new version of Coeliac Sanctuary currently in development using Laravel, Tailwind CSS and Vue."></jp-image>
-
-        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The new version of Coeliac Sanctuary currently in development using Laravel, Tailwind CSS and Vue.</p>
-    </div>
-</div>
-    </div>
-</div>
- 
-    </div>
-    </div>
-</div>
- 
- 
-
-                 <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
-    <div class="mb-3 text-blue-900 font-semibold border-b border-blue-900 pb-2 text-center sm:text-left">
-        <h2 class="text-2xl">Architect</h2>
-        <h3>
-            <a href="https://www.github.com/jpeters8889/architect" target="_blank" class="text-black hover:text-blue-900 break-words">www.github.com/jpeters8889/achitect</a>
-        </h3>
-    </div>
-    <div>
-        <div class="flex flex-col">
-        <div class="flex-1">
-            <p>
-                Architect is a Laravel Admin Package I am currently developing as a Vue SPA and using TDD for the
-            </p>
-<p>
-                Architect is controlled using a concept I have created called Blueprints and Plans, a Blueprint links to
-                a model, and each Plan then links to the columns in the model using text fields and other form elements.
+                The website is now styled using Tailwind CSS with a customised configuration file for custom colours,
+                sizes and breakpoints.
             </p>
             <p>
-                Below is a basic example of a Blueprint, the Blueprint is for a User Model and includes for plans for
-                the users name, email, password and created at timestamp. The password and created at plans also have
-                modifiers on them to hide it on the index view, and hide it on the form view respectively.
+                The website makes heavy use of Vue components, but is primarily a Blade powered website, but key parts
+                of the website rely heavily on Vue.
             </p>
             <p>
-                Architect will use this Blueprint and render a tabular list of the users in the application and display
-                their name, email and the date they were created, and then the and edit forms will render inputs for
-                their name, email and password.
+                All images on the website are hosted on Amazon S3, and all emails, transactional, and newsletters, are
+                sent through Amazon SES, with the newsletter managed by Spatie's Mailcoach.
+            </p>
+            <p>
+                The website is hosted on Digital Ocean, linked with Laravel Forge and Laravel Envoyer.
             </p>
         </div>
-
-         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col pb-0 shadow">
-            <h2 class="m-2 mb-0 font-semibold text-2xl text-blue-900 leading-none">Project Images</h2>
-        <p class="m-2 -mb-2 leading-none" style="margin-bottom: -0.25rem;">
-            Below are some images related to this project, images can be clicked to enlarge them.
-        </p>
-        <div class="flex flex-wrap">
-        <div class="flex flex-col p-2 max-w-300px">
-    <div class="bg-white-60 p-2 shadow">
-        <jp-image src="http://jamie-peters.test/assets/images/architect-list.png" alt="The tabular list of all records built from a Blueprint"></jp-image>
-
-        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The tabular list of all records built from a Blueprint</p>
-    </div>
-</div>
- 
-
-             <div class="flex flex-col p-2 max-w-300px">
-    <div class="bg-white-60 p-2 shadow">
-        <jp-image src="http://jamie-peters.test/assets/images/architect-form.png" alt="The form generated from a Blueprint to edit a blog."></jp-image>
-
-        <p class="text-center text-sm leading-tight mt-2 text-gray-800">The form generated from a Blueprint to edit a blog.</p>
-    </div>
-</div>
-    </div>
-</div>
- 
-
-         <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col p-2 shadow">
-    <h2 class="font-semibold text-2xl text-blue-900 leading-none mb-2">Code Sample</h2>
-    <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
-
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Blueprints</span>;
-
-<span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">User</span> <span class="hljs-title">as</span> <span class="hljs-title">UserModel</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">JPeters</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Blueprints</span>\<span class="hljs-title">Blueprint</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">JPeters</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Plans</span>\<span class="hljs-title">DateTime</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">JPeters</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Plans</span>\<span class="hljs-title">Password</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">JPeters</span>\<span class="hljs-title">Architect</span>\<span class="hljs-title">Plans</span>\<span class="hljs-title">Textfield</span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Blueprint</span>
-</span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">model</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span>
-    </span>{
-        <span class="hljs-keyword">return</span> UserModel::class;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plans</span><span class="hljs-params">()</span>: <span class="hljs-title">array</span>
-    </span>{
-        <span class="hljs-keyword">return</span> [
-            <span class="hljs-keyword">new</span> Textfield(<span class="hljs-string">'name'</span>),
-
-            <span class="hljs-keyword">new</span> Textfield(<span class="hljs-string">'email'</span>),
-
-            (<span class="hljs-keyword">new</span> Password(<span class="hljs-string">'password'</span>))-&gt;hideOnIndex(),
-
-            (<span class="hljs-keyword">new</span> DateTime(<span class="hljs-string">'created_at'</span>))-&gt;hideOnForms(),
-        ];
-    }
-}</code></pre>
-</div>
- 
     </div>
     </div>
 </div>
- 
- 
 
-                 <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
-    <div class="mb-3 text-blue-900 font-semibold border-b border-blue-900 pb-2 text-center sm:text-left">
-        <h2 class="text-2xl">Laravel Page View Builder</h2>
-        <h3>
-            <a href="https://github.com/jpeters8889/laravel-page-builder" target="_blank" class="text-black hover:text-blue-900 break-words">www.github.com/jpeters8889/laravel-page-builder</a>
-        </h3>
-    </div>
-    <div>
-        <p>
-        A simple package I originally created for Coeliac Sanctuary and extracted out into a package when I started
-        using the same functionality in other projects.
-    </p>
-    <p>
-        The idea is to be able to dependency inject the Page Builder class into the controller, and then the class can
-        be used to specify a page title, meta information etc and then return a fully rendered blade view in the
-        response with the appropriate data.
-    </p>
-    <p>
-        Below is a code sample from a Controller, specifying a page title and meta description and returning a welcome
-        view.
-    </p>
-     <div class="border border-blue-900-20 bg-blue-900-05 mt-2 flex flex-col p-2 shadow">
-    <h2 class="font-semibold text-2xl text-blue-900 leading-none mb-2">Code Sample</h2>
-    <pre class="clear-both"><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
-
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
-
-<span class="hljs-keyword">use</span> <span class="hljs-title">Carbon</span>\<span class="hljs-title">Carbon</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">JPeters</span>\<span class="hljs-title">PageViewBuilder</span>\<span class="hljs-title">Page</span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WelcomeController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
-</span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">(Page $page)</span>
-    </span>{
-        <span class="hljs-keyword">return</span> $page-&gt;setPageTitle(<span class="hljs-string">'Welcome'</span>)
-            -&gt;setMetaDescription(<span class="hljs-string">'Welcome to my Laravel App'</span>)
-            -&gt;render(<span class="hljs-string">'app'</span>, [
-               <span class="hljs-string">'date'</span> =&gt; Carbon::now(),
-            ]);
-    }
-}</code></pre>
-</div>
-    </div>
-</div>
- 
- 
-
-                 <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
+                <div class="flex flex-col bg-blue-900-05 p-2 mb-4 shadow">
     <div class="mb-3 text-blue-900 font-semibold border-b border-blue-900 pb-2 text-center sm:text-left">
         <h2 class="text-2xl">This website</h2>
         <h3>
@@ -298,7 +132,7 @@
     </div>
     <div>
         <p>
-        This website is a very simple Laravel app that uses by Page View Builder above to render the pages.
+        This website is a very simple Laravel app that uses my Page View Builder above to render the views.
     </p>
     <p>
         Along with being written in Laravel this website also uses Tailwind CSS and Vue components for additional
@@ -306,15 +140,12 @@
     </p>
     </div>
 </div>
- 
- 
             </div>
 </div>
- 
 
     </div>
 
-     <footer class="w-full bg-blue-900 text-white shadow-lg p-2 flex flex-col mt-2 sm:px-4">
+    <footer class="w-full bg-blue-900 text-white shadow-lg p-2 flex flex-col mt-2 sm:px-4">
     <div class="main-wrapper text-xs text-white-60 text-center">
         <p>
             Created using <a href="https://www.laravel.com/" target="_blank">Laravel</a>, styled with <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and enhanced with <a href="https://vuejs.org/" target="_blank">Vue</a>.
@@ -324,7 +155,6 @@
         </p>
     </div>
 </footer>
- 
 
     <portal-target name="modal"></portal-target>
 </div>

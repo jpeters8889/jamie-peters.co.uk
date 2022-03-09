@@ -13,10 +13,6 @@
             <div class="flex flex-col">
                 <x-projects.coeliac></x-projects.coeliac>
 
-                <x-projects.architect snippet="{!! $architectSnippet !!}"></x-projects.architect>
-
-                <x-projects.view-builder snippet="{!! $viewBuilderSnippet !!}"></x-projects.view-builder>
-
                 <x-projects.website></x-projects.website>
             </div>
         </x-slot>

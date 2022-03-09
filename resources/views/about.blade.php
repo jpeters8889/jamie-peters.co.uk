@@ -12,7 +12,8 @@
                     <p>
                         Web Design has been my main interest since 2001/2002 when as a young twelve or thirteen year old
                         I frequented one of the early Harry Potter fansites and wanted to make my own. My first websites
-                        weren't great, but I never gave up. Over the next year or so I started learning HTML and the then
+                        weren't great, but I never gave up. Over the next year or so I started learning HTML and the
+                        then
                         traditional table based layouts. Later, after I had turned 15, I did my Work Experience through
                         school with a home PHP Developer, and from there I started learning PHP and MySQL, when table
                         layouts started dying out in the mid-to-late 2000s I started learning CSS and making my first
@@ -22,14 +23,13 @@
                         <jp-image src="{{ asset('assets/images/laravel-logo.png') }}" alt="Laravel" :zoomable="false"
                                   classes="w-1/3 max-w-200px float-right ml-2 my-2"></jp-image>
                         Within the past 5 years or so I started learning more Object Orientated PHP and applying that
-                        methodology to my projects, and later within the last couple of years I started learning and
-                        using Laravel more, which I have now become a bit of an enthusiast for, and it is my go to for
-                        new projects, including using TDD where I can.
+                        methodology to my projects, and not long after that I started learning and using Laravel more,
+                        which I have now become a bit of an enthusiast for, and it is my go to for new projects, trying
+                        to follow a TDD approach.
                     </p>
                     <p>
-                        Coupled with learning Laravel I have also started using Tailwind CSS more instead of writing my
-                        own traditional CSS files, and I have learnt the Vue Javascript framework and started
-                        adopting this into my own projects too.
+                        Coupled with learning Laravel I Tailwind CSS has become my go to choice instead of writing my
+                        own traditional CSS files, and this coupled with VueJS has become my main preferred tech stack.
                     </p>
                     <p>
                         Over the past few years I've come to the conclusion that I prefer the development side of Web
@@ -39,9 +39,13 @@
                     </p>
                     <p>
                         Outside of Web Development my other main interests include photography, whenever I am out with
-                        my Fiancee and her family I always have my camera with me, I use a combination of Adobe
-                        Lightroom and Adobe Photoshop to post-process my photos, then the very best end up on my
-                        <a href="http://www.flickr.com/photos/jpeters8889/sets" target="_blank">Flickr Stream</a>.
+                        my wife and her family I always have my camera with me, I use a combination of Adobe
+                        Lightroom and Adobe Photoshop to post-process my photos, then the very best originally used to
+                        get uploaded to my
+                        <a href="http://www.flickr.com/photos/jpeters8889/sets" target="_blank">Flickr Stream</a>, but
+                        in the last year or so I have been using a
+                        <a href="https://www.facebook.com/Jamie-Peters-Photography-104822765049717/" target="_blank">Facebook
+                            Page</a> to showcase my photography.
                     </p>
                     <p>
                         I love to travel, which helps with my photography, and I am a little bit of an adrenaline
@@ -67,7 +71,7 @@
                                      alt="Me (With arms raised) on the zipslide"></x-project-image>
 
                     <x-project-image src="{{ asset('assets/images/zipslide-cheque.jpg') }}"
-                                     alt="My partner (far left), me, and my mother in law (middle) with staff in the Critical Care ward at Royal Stoke Hospital handing a cheque over for over £1600"></x-project-image>
+                                     alt="My wife (far left), me, and my mother in law (middle) with staff in the Critical Care ward at Royal Stoke Hospital handing a cheque over for over £1600"></x-project-image>
                 </x-project-images-wrapper>
             </div>
         </x-slot>
