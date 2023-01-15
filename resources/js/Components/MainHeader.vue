@@ -7,8 +7,8 @@ import MainNav from '@/Components/MainNav.vue';
     <div class="w-full">
       <MainNav/>
 
-      <div class="flex xs:justify-around">
-        <div class="flex flex-1 flex-col p-2 mx-auto max-w-wrapper xs:px-4">
+      <div class="flex xs:justify-around max-w-wrapper mx-auto">
+        <div class="flex flex-1 flex-col p-2 mx-auto xs:px-4">
           <div class="text-center xs:text-left xs:flex-1">
             <h1 class="font-serif text-2xl text-shadow-md tracking-wider mb-1 p-2 lg:text-3xl">Jamie Peters</h1>
             <h2 class="text-sm text-black font-semibold lg:text-base">Laravel / PHP / JavaScript Developer</h2>
