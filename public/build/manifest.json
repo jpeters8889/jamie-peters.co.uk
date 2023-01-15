@@ -1,0 +1,90 @@
+{
+  "resources/js/app.css": {
+    "file": "assets/app-ea79872f.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/Pages/Articles.vue": {
+    "file": "assets/Articles-44a32b3a.js",
+    "src": "resources/js/Pages/Articles.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts",
+      "_advancedFormat-5b004900.js"
+    ]
+  },
+  "resources/js/Pages/Article.vue": {
+    "file": "assets/Article-b82bf842.js",
+    "src": "resources/js/Pages/Article.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts",
+      "_advancedFormat-5b004900.js"
+    ]
+  },
+  "resources/js/Pages/About.vue": {
+    "file": "assets/About-d0b3d533.js",
+    "src": "resources/js/Pages/About.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/Pages/Uses.vue": {
+    "file": "assets/Uses-2ca59df2.js",
+    "src": "resources/js/Pages/Uses.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/Pages/Home.vue": {
+    "file": "assets/Home-0e0bebfa.js",
+    "src": "resources/js/Pages/Home.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js": {
+    "file": "assets/Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+    "imports": [
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/Pages/Projects.vue": {
+    "file": "assets/Projects-cab2b726.js",
+    "src": "resources/js/Pages/Projects.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-55ef5a17.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "_advancedFormat-5b004900.js": {
+    "file": "assets/advancedFormat-5b004900.js",
+    "imports": [
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/app.ts": {
+    "file": "assets/app-27f3bd29.js",
+    "src": "resources/js/app.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/About.vue",
+      "resources/js/Pages/Article.vue",
+      "resources/js/Pages/Articles.vue",
+      "resources/js/Pages/Home.vue",
+      "resources/js/Pages/Projects.vue",
+      "resources/js/Pages/Uses.vue"
+    ],
+    "css": [
+      "assets/app-ea79872f.css"
+    ]
+  }
+}

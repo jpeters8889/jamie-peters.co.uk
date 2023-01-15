@@ -2,19 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Snippets;
-use Highlight\Highlighter;
-use JPeters\PageViewBuilder\PageViewBuilder;
+use Inertia\Response;
+use Inertia\ResponseFactory as Inertia;
 
 class ProjectsController
 {
-    public function get(PageViewBuilder $page, Snippets $snippets)
+    public function __invoke(Inertia $inertia): Response
     {
-        return $page
-            ->setPageTitle('Personal Projects')
-            ->render('projects', [
-                'architectSnippet' => $snippets->architect(),
-                'viewBuilderSnippet' => $snippets->viewBuilder(),
-            ]);
+        return $inertia->render('Projects');
     }
 }

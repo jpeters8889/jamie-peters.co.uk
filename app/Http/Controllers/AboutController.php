@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use JPeters\PageViewBuilder\PageViewBuilder;
+use Inertia\Response;
+use Inertia\ResponseFactory as Inertia;
 
 class AboutController
 {
-    public function get(PageViewBuilder $page)
+    public function __invoke(Inertia $inertia): Response
     {
-        return $page
-            ->setPageTitle('About Me')
-            ->render('about');
+        return $inertia->render('About');
     }
 }
