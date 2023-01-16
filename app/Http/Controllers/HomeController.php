@@ -16,7 +16,7 @@ class HomeController
                 ->published()
                 ->latest()
                 ->take(3)
-                ->get(['slug', 'title', 'description'])
+                ->get(['slug', 'title', 'description', 'created_at'])
                 ->map(fn(Article $article) => [...$article->toArray(), 'description' => Str::limit($article->description)]),
         ]);
     }
