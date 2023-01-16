@@ -13,7 +13,7 @@ defineProps({
   <div>
     <h2 class="m-0 mb-3 text-primary font-semibold text-xl" v-text="title" />
     <div class="flex">
-      <div class="mx-4 bg-primary w-0.5"/>
+      <div class="mx-4 bg-primary w-0.5 lg:mr-6"/>
 
       <div class="flex-col">
         <slot />
