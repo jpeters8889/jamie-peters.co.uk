@@ -20,7 +20,27 @@ const date = (date: string): string => {
 </script>
 
 <template>
-  <Head :title="`${article.title} - Articles`" />
+  <Head>
+    <title>{{ article.title}} - Articles</title>
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
+    <meta property="og:description" :content="article.description"/>
+    <meta property="og:title" :content="`${article.title} - Articles`"/>
+    <meta property="og:image" :content="article.ogImage"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" :content="`https://jamie-peters.co.uk/articles/${article.slug}`"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" :content="article.description"/>
+    <meta name="twitter:title" :content="`${article.title} - Articles`"/>
+    <meta name="twitter:site" content="@jpeters8889"/>
+    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
+    <meta name="twitter:image:src" :content="article.ogImage"/>
+    <meta name="twitter:creator" content="@jpeters8889"/>
+
+  </Head>
 
   <Layout>
     <Card>

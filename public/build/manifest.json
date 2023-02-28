@@ -1,79 +1,79 @@
 {
   "resources/js/app.css": {
-    "file": "assets/app-1d39d621.css",
+    "file": "assets/app-62306865.css",
     "src": "resources/js/app.css"
   },
-  "resources/js/Pages/Home.vue": {
-    "file": "assets/Home-1d00d65d.js",
-    "src": "resources/js/Pages/Home.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
-      "_advancedFormat-5c995d5d.js",
-      "resources/js/app.ts"
-    ]
-  },
-  "resources/js/Pages/Article.vue": {
-    "file": "assets/Article-c6d53c6b.js",
-    "src": "resources/js/Pages/Article.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
-      "resources/js/app.ts",
-      "_advancedFormat-5c995d5d.js"
-    ]
-  },
-  "resources/js/Pages/Articles.vue": {
-    "file": "assets/Articles-77ffd0ed.js",
-    "src": "resources/js/Pages/Articles.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
-      "resources/js/app.ts",
-      "_advancedFormat-5c995d5d.js"
-    ]
-  },
   "resources/js/Pages/About.vue": {
-    "file": "assets/About-b1ef01b1.js",
+    "file": "assets/About-92d6d933.js",
     "src": "resources/js/Pages/About.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
       "resources/js/app.ts"
     ]
   },
-  "resources/js/Pages/Projects.vue": {
-    "file": "assets/Projects-77cb6c70.js",
-    "src": "resources/js/Pages/Projects.vue",
+  "resources/js/Pages/Articles.vue": {
+    "file": "assets/Articles-4064b367.js",
+    "src": "resources/js/Pages/Articles.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
+      "resources/js/app.ts",
+      "_advancedFormat-8805fa84.js"
+    ]
+  },
+  "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js": {
+    "file": "assets/Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
+    "imports": [
       "resources/js/app.ts"
     ]
   },
   "resources/js/Pages/Uses.vue": {
-    "file": "assets/Uses-069250e4.js",
+    "file": "assets/Uses-26fd9178.js",
     "src": "resources/js/Pages/Uses.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
       "resources/js/app.ts"
     ]
   },
-  "_Card.vue_vue_type_script_setup_true_lang-bdedea48.js": {
-    "file": "assets/Card.vue_vue_type_script_setup_true_lang-bdedea48.js",
+  "resources/js/Pages/Article.vue": {
+    "file": "assets/Article-2dec3491.js",
+    "src": "resources/js/Pages/Article.vue",
+    "isDynamicEntry": true,
     "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
+      "resources/js/app.ts",
+      "_advancedFormat-8805fa84.js"
+    ]
+  },
+  "resources/js/Pages/Projects.vue": {
+    "file": "assets/Projects-2e2bfe58.js",
+    "src": "resources/js/Pages/Projects.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
       "resources/js/app.ts"
     ]
   },
-  "_advancedFormat-5c995d5d.js": {
-    "file": "assets/advancedFormat-5c995d5d.js",
+  "resources/js/Pages/Home.vue": {
+    "file": "assets/Home-481f7810.js",
+    "src": "resources/js/Pages/Home.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Card.vue_vue_type_script_setup_true_lang-0f29d759.js",
+      "_advancedFormat-8805fa84.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "_advancedFormat-8805fa84.js": {
+    "file": "assets/advancedFormat-8805fa84.js",
     "imports": [
       "resources/js/app.ts"
     ]
   },
   "resources/js/app.ts": {
-    "file": "assets/app-2fc305a1.js",
+    "file": "assets/app-a8e1dfa2.js",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "dynamicImports": [
@@ -85,7 +85,7 @@
       "resources/js/Pages/Uses.vue"
     ],
     "css": [
-      "assets/app-1d39d621.css"
+      "assets/app-62306865.css"
     ]
   }
 }

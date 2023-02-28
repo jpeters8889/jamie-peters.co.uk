@@ -26,7 +26,26 @@ const nextPage: ComputedRef<number | null> = computed(() => props.articles.curre
 </script>
 
 <template>
-  <Head title="Articles"/>
+  <Head>
+    <title>Articles</title>
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
+    <meta property="og:description" content="Check out my articles"/>
+    <meta property="og:title" content="Jamie Peters - Articles"/>
+    <meta property="og:image" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="https://jamie-peters.co.uk/articless"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Check out my articles"/>
+    <meta name="twitter:title" content="Jamie Peters - Articles"/>
+    <meta name="twitter:site" content="@jpeters8889"/>
+    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
+    <meta name="twitter:image:src" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta name="twitter:creator" content="@jpeters8889"/>
+  </Head>
 
   <Layout>
     <Link v-for="article in articles.data" :key="article.slug" :href="`/articles/${article.slug}`">

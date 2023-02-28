@@ -22,6 +22,27 @@ const props = defineProps({
 </script>
 
 <template>
+  <Head>
+    <title>Jamie Peters - Laravel / PHP Developer</title>
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
+    <meta property="og:description" content="Welcome to my personal website"/>
+    <meta property="og:title" content="Jamie Peters - Laravel / PHP Developer"/>
+    <meta property="og:image" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="https://jamie-peters.co.uk"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Welcome to my personal website"/>
+    <meta name="twitter:title" content="Jamie Peters - Laravel / PHP Developer"/>
+    <meta name="twitter:site" content="@jpeters8889"/>
+    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
+    <meta name="twitter:image:src" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta name="twitter:creator" content="@jpeters8889"/>
+  </Head>
+
   <Layout>
     <div class="flex flex-col space-y-4 xl:flex-row xl:space-y-0">
       <div class="flex-1">

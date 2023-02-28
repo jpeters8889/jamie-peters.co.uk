@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -19,6 +20,8 @@ use Spatie\Sluggable\SlugOptions;
 class Article extends Model
 {
     use HasSlug;
+
+    protected $appends = ['ogImage'];
 
     protected $casts = ['published' => 'bool'];
 
@@ -52,5 +55,9 @@ class Article extends Model
     public function scopePublished(Builder $query): Builder
     {
         return $query->where('published', true);
+    }
+    public function getOgImageAttribute(): string
+    {
+        return Storage::disk('s3')->url("{$this->slug}.jpg");
     }
 }

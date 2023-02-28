@@ -6,8 +6,26 @@ import {Head} from '@inertiajs/vue3'
 </script>
 
 <template>
-  <Head title="Projects"/>
+  <Head>
+    <title>Projects</title>
 
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
+    <meta property="og:description" content="Check out some of my projects"/>
+    <meta property="og:title" content="Jamie Peters - Projects"/>
+    <meta property="og:image" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="https://jamie-peters.co.uk/projects"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Check out some of my projects"/>
+    <meta name="twitter:title" content="Jamie Peters - Projects"/>
+    <meta name="twitter:site" content="@jpeters8889"/>
+    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
+    <meta name="twitter:image:src" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta name="twitter:creator" content="@jpeters8889"/>
+  </Head>
   <Layout>
     <Card>
       <template #title>Projects</template>

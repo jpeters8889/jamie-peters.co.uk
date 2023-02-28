@@ -5,7 +5,26 @@ import {Head, Link} from '@inertiajs/vue3'
 </script>
 
 <template>
-  <Head title="About Me"/>
+  <Head>
+    <title>About Me</title>
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
+    <meta property="og:description" content="Read all about me"/>
+    <meta property="og:title" content="Jamie Peters - About Me"/>
+    <meta property="og:image" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="https://jamie-peters.co.uk/about"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Read all about me"/>
+    <meta name="twitter:title" content="Jamie Peters - About Me"/>
+    <meta name="twitter:site" content="@jpeters8889"/>
+    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
+    <meta name="twitter:image:src" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
+    <meta name="twitter:creator" content="@jpeters8889"/>
+  </Head>
 
   <Layout>
     <Card>
