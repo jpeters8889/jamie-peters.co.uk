@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "352e2972f4a0fdcbdaa98d297fe27d82",
+    "content-hash": "6cae478ae521729ce20a3a00cc930436",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1222,16 +1222,16 @@
         },
         {
             "name": "inertiajs/inertia-laravel",
-            "version": "v0.6.7",
+            "version": "v0.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inertiajs/inertia-laravel.git",
-                "reference": "4e5bf5c254d8a6fb8a1049293fb415945c280213"
+                "reference": "b983c6eb2fe7460df6170060cdd7b47b5ef6832a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/4e5bf5c254d8a6fb8a1049293fb415945c280213",
-                "reference": "4e5bf5c254d8a6fb8a1049293fb415945c280213",
+                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/b983c6eb2fe7460df6170060cdd7b47b5ef6832a",
+                "reference": "b983c6eb2fe7460df6170060cdd7b47b5ef6832a",
                 "shasum": ""
             },
             "require": {
@@ -1244,6 +1244,9 @@
                 "orchestra/testbench": "^4.0|^5.0|^6.4|^7.0|^8.0",
                 "phpunit/phpunit": "^8.0|^9.5.8",
                 "roave/security-advisories": "dev-master"
+            },
+            "suggest": {
+                "ext-pcntl": "Recommended when running the Inertia SSR server via the `inertia:start-ssr` artisan command."
             },
             "type": "library",
             "extra": {
@@ -1279,7 +1282,7 @@
             ],
             "support": {
                 "issues": "https://github.com/inertiajs/inertia-laravel/issues",
-                "source": "https://github.com/inertiajs/inertia-laravel/tree/v0.6.7"
+                "source": "https://github.com/inertiajs/inertia-laravel/tree/v0.6.9"
             },
             "funding": [
                 {
@@ -1287,7 +1290,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-13T02:28:35+00:00"
+            "time": "2023-01-17T01:02:51+00:00"
         },
         {
             "name": "intervention/image",
