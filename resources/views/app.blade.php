@@ -14,5 +14,18 @@
 </head>
 <body class="min-h-screen bg-gray-200">
     @inertia
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110429316-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110429316-1');
+    </script>
 </body>
 </html>
