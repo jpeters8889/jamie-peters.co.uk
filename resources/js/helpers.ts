@@ -23,7 +23,7 @@ export const menuItems = (): MenuItem[] => [
   },
   {
     label: 'Work & Projects',
-    href: '/work',
+    href: '/work-and-projects',
   },
   {
     label: 'Speaking',
