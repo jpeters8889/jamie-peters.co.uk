@@ -1,41 +1,52 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature;
 
 use Inertia\Testing\AssertableInertia as Assert;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class PageLoadTest extends TestCase
 {
-    /** @test */
-    public function it_loads_the_homepage()
+    #[Test]
+    public function it_loads_the_homepage(): void
     {
-        $this->get('/')
+        $this->get(route('home'))
             ->assertStatus(200)
             ->assertInertia(fn (Assert $page) => $page->component('Home'));
     }
 
-    /** @test */
-    public function it_loads_the_about_page()
+    #[Test]
+    public function it_loads_the_about_page(): void
     {
-        $this->get('/about')
+        $this->get(route('about'))
             ->assertStatus(200)
             ->assertInertia(fn (Assert $page) => $page->component('About'));
     }
 
-    /** @test */
-    public function it_loads_the_projects_page()
+    #[Test]
+    public function it_loads_the_projects_page(): void
     {
-        $this->get('/projects')
+        $this->get(route('work'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Projects'));
+            ->assertInertia(fn (Assert $page) => $page->component('Work'));
     }
 
-    /** @test */
+    #[Test]
     public function it_loads_the_uses_page(): void
     {
-        $this->get('/uses')
+        $this->get(route('uses'))
             ->assertStatus(200)
             ->assertInertia(fn (Assert $page) => $page->component('Uses'));
+    }
+
+    #[Test]
+    public function it_loads_the_speaking_page(): void
+    {
+        $this->get(route('speaking'))
+            ->assertStatus(200)
+            ->assertInertia(fn (Assert $page) => $page->component('Speaking'));
     }
 }

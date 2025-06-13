@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import {defineProps} from "vue";
+import { defineProps } from 'vue';
+import { UsesProps } from '@/types/Uses';
 
-defineProps({
-  title: {
-    required: true,
-    type: String,
-  }
-});
+defineProps<UsesProps>();
 </script>
 
 <template>
   <div>
-    <h2 class="m-0 mb-3 text-primary font-semibold text-xl" v-text="title" />
+    <h2
+      class="m-0 mb-3 text-xl font-semibold text-primary"
+      v-text="title"
+    />
     <div class="flex">
-      <div class="mx-4 bg-primary w-0.5 lg:mr-6"/>
+      <div class="mx-4 w-0.5 bg-primary/10 lg:mr-6" />
 
-      <div class="flex-col">
+      <div class="flex-col space-y-4">
         <slot />
       </div>
     </div>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.5 81.4">
+    <defs>
+        <linearGradient id="a" x1="35.2" y1="20.3" x2="70.5" y2="20.3" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f47f1f"/>
+            <stop offset=".3" stop-color="#f1741c"/>
+            <stop offset=".7" stop-color="#ea5717"/>
+            <stop offset="1" stop-color="#e64213"/>
+        </linearGradient>
+        <linearGradient id="b" x1="0" y1="61" x2="35.2" y2="61" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#1e1e3e"/>
+            <stop offset=".9" stop-color="#13173f"/>
+            <stop offset="1" stop-color="#121740"/>
+        </linearGradient>
+        <linearGradient id="c" x1="0" y1="24.5" x2="35.2" y2="24.5" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#0092d1"/>
+            <stop offset=".2" stop-color="#0473ac"/>
+            <stop offset=".5" stop-color="#0a4b7d"/>
+            <stop offset=".7" stop-color="#0e2e5c"/>
+            <stop offset=".9" stop-color="#111d47"/>
+            <stop offset="1" stop-color="#121740"/>
+        </linearGradient>
+        <linearGradient id="d" x1="35.2" y1="56.6" x2="70.5" y2="56.6" gradientUnits="userSpaceOnUse">
+            <stop offset=".3" stop-color="#f47f1f"/>
+            <stop offset=".4" stop-color="#f4891d"/>
+            <stop offset=".6" stop-color="#f7a61a"/>
+            <stop offset=".9" stop-color="#fbd416"/>
+            <stop offset="1" stop-color="#fdea14"/>
+        </linearGradient>
+    </defs>
+    <path d="M64.5 16.9 35.2 0v25l27.4 15.7c3.3-2.3 6-5.4 7.9-9v-4.5a12 12 0 0 0-6-10.3Z" style="fill:url(#a)"/>
+    <path d="M0 49V54a12 12 0 0 0 6 10.4l29.2 16.9v-25L7.8 40.7C4.6 42.8 2 45.7 0 49Z" style="fill:url(#b)"/>
+    <path d="M35.1 0 6 17a12 12 0 0 0-6 10.3V49c2-3.3 4.6-6.1 7.8-8.2l1.7-1 16.7-9.5 9-5.2V0Z" style="fill:url(#c)"/>
+    <path d="m62.6 40.7-3.4 2-15.5 8.8-8.5 4.9v25l.2-.1 29.1-16.8c3.7-2.2 6-6.1 6-10.4V31.8a24.5 24.5 0 0 1-7.9 8.9Z"
+          style="fill:url(#d)"/>
+    <script xmlns=""/>
+</svg>

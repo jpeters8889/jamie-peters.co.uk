@@ -1,22 +1,32 @@
 import './bootstrap';
 import '../css/app.css';
+import {Component, createApp, h} from 'vue';
+import {createInertiaApp} from '@inertiajs/vue3';
+import {InertiaPage} from '@/types/Core';
+import {getTitle} from '@/helpers';
+import Layout from "@/Layouts/Layout.vue";
 
-import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/vue3'
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+void createInertiaApp({
+    title: getTitle,
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Jamie Peters - Laravel/PHP Developer';
-
-createInertiaApp({
-    title: (title) => title ? `${title} - ${appName}` : appName,
     progress: {
         color: '#4B5563',
     },
-    // @ts-ignore
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+
+    resolve: async (name) => {
+        // @ts-ignore
+        const pages: Record<string, () => Promise<() => InertiaPage>> =
+            import.meta.glob('./Pages/**/*.vue');
+
+        // @ts-ignore
+        const page: InertiaPage = await pages[`./Pages/${name}.vue`]();
+
+        page.default.layout = page.default.layout || (Layout as Component);
+
+        return page;
+    },
+
     setup({ el, App, props, plugin }) {
-        return createApp({ render: () => h(App, props) })
-            .use(plugin)
-            .mount(el);
+        createApp({render: () => h(App, props)}).use(plugin).mount(el);
     },
 });

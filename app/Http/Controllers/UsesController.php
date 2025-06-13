@@ -1,14 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
+use App\Http\Response\Inertia;
 use Inertia\Response;
-use Inertia\ResponseFactory as Inertia;
 
 class UsesController
 {
     public function __invoke(Inertia $inertia): Response
     {
-        return $inertia->render('Uses');
+        return $inertia
+            ->title('Uses')
+            ->render('Uses');
     }
 }

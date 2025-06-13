@@ -16,3 +16,6 @@ yarn-error.log
 /build/
 /bootstrap/ssr/
 /public/build/
+
+/old
+*.DS_Store

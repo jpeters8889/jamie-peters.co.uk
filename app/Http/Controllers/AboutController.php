@@ -1,14 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
+use App\Http\Response\Inertia;
 use Inertia\Response;
-use Inertia\ResponseFactory as Inertia;
 
 class AboutController
 {
     public function __invoke(Inertia $inertia): Response
     {
-        return $inertia->render('About');
+        return $inertia
+            ->title('About Me')
+            ->render('About', [
+                'me' => asset('images/me-wedding.jpg')
+            ]);
     }
 }

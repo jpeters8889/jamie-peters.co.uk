@@ -25,17 +25,17 @@
         <div class="flex flex-1 flex-col relative">
             <div class="flex justify-around">
                 <div class="block w-48 h-48 rounded-full overflow-hidden border-8 border-white absolute top-[-6rem] left-auto right-auto">
-                    <img src="/images/me.jpg" alt="Jamie Peters - Laravel / PHP Developer"/>
+                    <img src="{{ asset('images/me-vilt.jpg') }}" alt="Jamie Peters - Laravel / PHP Developer"/>
                 </div>
             </div>
 
             <div class="p-4 text-center mt-4 flex-1 justify-end flex flex-col pb-12">
                 <h1 class="text-4xl">
-                    {{ $article->title }}
+                    {{ $blog->title }}
                 </h1>
 
                 <p class="mt-4 text-lg">
-                    {{ $article->description }}
+                    {{ $blog->description }}
                 </p>
             </div>
         </div>

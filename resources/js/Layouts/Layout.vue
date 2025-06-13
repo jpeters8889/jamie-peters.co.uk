@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import MainHeader from '@/Components/MainHeader.vue';
-import MainFooter from '@/Components/MainFooter.vue';
+import { MetaProps } from '@/types/DefaultProps';
+import Header from '@/Layouts/Components/Header.vue';
+import Footer from '@/Layouts/Components/Footer.vue';
+
+defineProps<{ meta: MetaProps }>();
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen">
-    <MainHeader />
+  <div
+    class="relative mx-auto flex min-h-screen max-w-5xl flex-col bg-white shadow-md"
+  >
+    <Header :metas="meta" />
 
-    <div class="w-full mx-auto max-w-wrapper flex-1">
-      <slot/>
+    <div class="mt-10 flex flex-1 flex-col space-y-10">
+      <slot />
     </div>
 
-    <MainFooter />
+    <Footer />
   </div>
 </template>

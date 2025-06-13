@@ -1,23 +1,23 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
-use App\Models\Article;
-use Illuminate\Support\Str;
+use App\Actions\GetWorkHistoryAction;
+use App\Http\Resources\BlogSnippetResource;
+use App\Http\Response\Inertia;
+use App\Models\Blog;
 use Inertia\Response;
-use Inertia\ResponseFactory as Inertia;
 
 class HomeController
 {
-    public function __invoke(Inertia $inertia): Response
+    public function __invoke(Inertia $inertia, GetWorkHistoryAction $getWorkHistoryAction): Response
     {
         return $inertia->render('Home', [
-            'articles' => Article::query()
-                ->published()
-                ->latest()
-                ->take(3)
-                ->get(['slug', 'title', 'description', 'created_at'])
-                ->map(fn(Article $article) => [...$article->toArray(), 'description' => Str::limit($article->description)]),
+            'blogs' => Blog::query()->latest()->take(3)->get()->mapInto(BlogSnippetResource::class),
+            'employment' => $getWorkHistoryAction->handle(),
+            'me' => asset('images/me-vilt.jpg'),
         ]);
     }
 }

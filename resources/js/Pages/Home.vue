@@ -1,106 +1,143 @@
 <script setup lang="ts">
-import Layout from '@/Layouts/Layout.vue';
 import Card from '@/Components/Card.vue';
-import dayjs from 'dayjs';
-import advancedFormat from "dayjs/plugin/advancedFormat";
-import {Article} from "../models/article";
-import {defineProps} from "vue";
-import {Link} from '@inertiajs/vue3'
+import Heading from '@/Components/Heading.vue';
+import GithubIcon from '@/Icons/GithubIcon.vue';
+import XIcon from '@/Icons/XIcon.vue';
+import LinkedInIcon from '@/Icons/LinkedInIcon.vue';
+import { Link } from '@inertiajs/vue3';
+import { BlogSnippet as BlogSnippetType } from '@/types/Blogs';
+import { WorkSnippet as WorkSnippetType } from '@/types/Work';
+import BlogSnippet from '@/Components/BlogSnippet.vue';
+import WorkSnippet from '@/Components/WorkSnippet.vue';
+import { EnvelopeIcon } from '@heroicons/vue/24/solid';
 
-dayjs.extend(advancedFormat)
-
-const date = (date: string): string => {
-  return dayjs(date).format('Do MMMM YYYY');
-}
-
-const props = defineProps({
-  'articles': {
-    required: true,
-    type: Array as () => Article[],
-  },
-});
+defineProps<{
+  blogs: BlogSnippetType[];
+  employment: WorkSnippetType[];
+  me: string;
+}>();
 </script>
 
 <template>
-  <Head>
-    <title>Jamie Peters - Laravel / PHP Developer</title>
+  <div
+    class="flex flex-col items-center justify-center space-y-8 p-8 xs:flex-row xs:space-y-0 xs:space-x-4 sm:items-start md:space-x-8 lg:space-x-16"
+  >
+    <div>
+      <h1
+        class="text-center font-serif text-4xl leading-loose font-semibold text-primary sm:text-left sm:text-5xl lg:text-6xl"
+      >
+        Hey, I'm Jamie
+      </h1>
+      <h2
+        class="mt-4 text-center text-sm font-semibold sm:text-left lg:text-lg"
+      >
+        I'm a developer specialising in Laravel, Vue, InertiaJS and Tailwind
+        (VILT Stack)
+      </h2>
 
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_GB"/>
-    <meta property="og:site_name" content="Jamie Peters - Laravel Developer"/>
-    <meta property="og:description" content="Welcome to my personal website"/>
-    <meta property="og:title" content="Jamie Peters - Laravel / PHP Developer"/>
-    <meta property="og:image" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
-    <meta property="og:image:type" content="image/jpeg"/>
-    <meta property="og:url" content="https://jamie-peters.co.uk"/>
-
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:description" content="Welcome to my personal website"/>
-    <meta name="twitter:title" content="Jamie Peters - Laravel / PHP Developer"/>
-    <meta name="twitter:site" content="@jpeters8889"/>
-    <meta name="twitter:domain" content="Jamie Peters - Laravel Developer"/>
-    <meta name="twitter:image:src" content="https://jamie-peters.s3.eu-west-2.amazonaws.com/og-image.jpg"/>
-    <meta name="twitter:creator" content="@jpeters8889"/>
-  </Head>
-
-  <Layout>
-    <div class="flex flex-col space-y-4 xl:flex-row xl:space-y-0">
-      <div class="flex-1">
-        <Card>
-          <template #title>Welcome</template>
-
-          <img src="/images/me.jpg" alt="Jamie Peters - Laravel / PHP Developer"
-               class="xs:hidden max-w-[15rem] m-0 mx-auto my-2"/>
-          <p>
-            Thank you for taking the time to visit my personal website, my name is Jamie Peters and I am a passionate,
-            committed and enthusiastic web developer with over 18 years experience in web design and development and I
-            am an
-            enthusiast of the <a href="https://www.laravel.com" target="_blank">Laravel PHP Framework</a>, along with
-            <a href="https://inertiajs.com/" target="_blank">Inertia</a>,
-            <a href="https://vuejs.org/" target="_blank">VueJS</a>, and
-            <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
-          </p>
-
-          <p>I am originally from South Yorkshire, but now live in South Cheshire.</p>
-        </Card>
-
-        <Card>
-          <template #title>My Key Skills</template>
-
-          <ul>
-            <li>
-              Extensive knowledge of Laravel and PHP, including
-              <ul>
-                <li>Test Driven Development using PHP Unit</li>
-                <li>Domain Driven Development/Modular Development</li>
-                <li>Strict Coding Standards with PHP CS Fixer and PHPStan/Larastan</li>
-                <li>Experience with Vue, Inertia and Tailwind CSS</li>
-              </ul>
-            </li>
-
-            <li>Experience using Laravel Valet, Laravel Forge, Laravel Envoyer, Digital Ocean, Amazon S3 and Amazon
-              SES
-            </li>
-          </ul>
-        </Card>
-      </div>
-
-      <div class="xl:w-1/3 xl:max-w-24">
-        <Card>
-          <template #title>Latest Articles</template>
-
-          <ul class="list-none m-0 p-0">
-            <li v-for="article in articles" :key="article.slug" class="p-0 py-2 border-b border-primary/30 last:border-b-0">
-              <Link :href="`/articles/${article.slug}`">{{ article.title }}</Link>
-              <p class="text-xs mt-0 mb-2" v-text="date(article.created_at)"/>
-              <p class="text-sm m-0" v-text="article.description" />
-              <Link :href="`/articles/${article.slug}`" class="text-sm">Read more...</Link>
-            </li>
-          </ul>
-
-          <Link href="/articles">View all Articles...</Link>
-        </Card>
+      <div class="mt-5 flex space-x-3 fill-primary text-primary">
+        <a
+          href="mailto:jamie@jamie-peters.co.uk"
+          target="_blank"
+        >
+          <EnvelopeIcon class="size-8 transition hover:fill-black" />
+        </a>
+        <a
+          href="https://www.github.com/jpeters8889"
+          target="_blank"
+        >
+          <GithubIcon class="size-8 transition hover:fill-black" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jpeters8889"
+          target="_blank"
+        >
+          <LinkedInIcon class="size-8 transition hover:fill-black" />
+        </a>
+        <a
+          href="https://www.twitter.com/jpeters8889"
+          target="_blank"
+        >
+          <XIcon class="size-8 transition hover:fill-black" />
+        </a>
       </div>
     </div>
-  </Layout>
+    <div class="aspect-square max-w-[270px] overflow-hidden rounded-full">
+      <img
+        :src="me"
+        alt="Me"
+      />
+    </div>
+  </div>
+
+  <Card>
+    <Heading>Who am I?</Heading>
+
+    <p class="prose">
+      Thank you for taking the time to visit my personal website, my name is
+      <strong>Jamie Peters</strong> and I am a passionate, committed and
+      enthusiastic web developer with over 20 years experience in web design and
+      development. I specialise in modern Laravel application development,
+      working extensively with
+      <a
+        href="https://www.laravel.com"
+        target="_blank"
+        >Laravel</a
+      >,
+      <a
+        href="https://inertiajs.com/"
+        target="_blank"
+        >Inertia.js</a
+      >,
+      <a
+        href="https://vuejs.org/"
+        target="_blank"
+        >Vue.js</a
+      >, and
+      <a
+        href="https://tailwindcss.com/"
+        target="_blank"
+        >Tailwind CSS</a
+      >
+      to create fast, clean and scalable web platforms.
+    </p>
+
+    <p class="prose">
+      I am originally from South Yorkshire, but now live in South Cheshire.
+    </p>
+  </Card>
+
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    <Card class="border-r border-primary/10 md:col-span-2">
+      <Heading>My writings</Heading>
+
+      <div class="flex flex-col space-y-5">
+        <BlogSnippet
+          v-for="blog in blogs"
+          :key="blog.title"
+          :blog="blog"
+        />
+      </div>
+
+      <p class="prose my-5">
+        <Link href="/blog">See more blogs...</Link>
+      </p>
+    </Card>
+
+    <Card class="pl-3">
+      <Heading>Work</Heading>
+
+      <div class="flex flex-col space-y-5">
+        <WorkSnippet
+          v-for="work in employment"
+          :key="work.startDate"
+          :work="work"
+        />
+      </div>
+
+      <p class="prose my-5">
+        <Link href="/work">Read more...</Link>
+      </p>
+    </Card>
+  </div>
 </template>
