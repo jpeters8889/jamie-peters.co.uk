@@ -136,7 +136,7 @@ defineProps<{
       </div>
 
       <p class="prose my-5">
-        <Link href="/work">Read more...</Link>
+        <Link href="/work-and-projects">Read more...</Link>
       </p>
     </Card>
   </div>
