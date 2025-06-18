@@ -15,22 +15,22 @@
 }
 
 @layer components {
-    p.prose {
+    .prose p {
         line-height: 1.6;
         margin-bottom: 10px;
     }
 
-    p.prose:last-of-type {
+    .prose p:last-of-type {
         margin-bottom: 0;
     }
 
-    p.prose a {
+    .prose p a {
         color: var(--color-primary);
         font-weight: var(--font-weight-semibold);
         transition: all;
     }
 
-    p.prose a:hover {
+    .prose p a:hover {
         color: var(--color-black);
     }
 }

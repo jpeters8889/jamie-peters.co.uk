@@ -37,7 +37,12 @@ class Blog extends Model
     /** @return Attribute<Collection<int, string>, never> */
     public function body(): Attribute
     {
-        return Attribute::get(fn (string $body) => Str::of($body)->explode(PHP_EOL));
+        return Attribute::get(fn (string $body) => Str::of($body)
+            ->markdown([
+                'renderer' => [
+                    'soft_break' => '<br />',
+                ],
+            ])->replace('<?php', "&lt;?php"));
     }
 
     public function resolveRouteBinding($value, $field = null): self

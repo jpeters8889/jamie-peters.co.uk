@@ -27,16 +27,26 @@ Route::prefix('blog')->name('blog.')->group(function (): void {
         return view('og-image', compact('blog'));
     })->name('og-image');
 
-    Route::get('make-og-image', function (Blog $blog) {
+    Route::get('/{blog}/make-og-image', function (Blog $blog) {
         if (config('app.env') !== 'local') {
             abort(404);
         }
+
+        /** @var string $nodeBinary */
+        $nodeBinary = config('browsershot.node_path');
+
+        /** @var string $npmBinary */
+        $npmBinary = config('browsershot.npm_path');
 
         Storage::disk('s3')->put(
             "{$blog->slug}.jpg",
             Browsershot::url(route('blog.og-image', $blog))
                 ->windowSize(1200, 630)
                 ->setScreenshotType('jpeg', 100)
+                ->setIncludePath('$PATH')
+                ->setNodeBinary($nodeBinary)
+                ->setNpmBinary($npmBinary)
+                ->noSandbox()
                 ->screenshot()
         );
 
