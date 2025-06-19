@@ -1,6 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
-import {Component, createApp, h} from 'vue';
+import {Component, createSSRApp, h} from 'vue';
 import {createInertiaApp} from '@inertiajs/vue3';
 import {InertiaPage} from '@/types/Core';
 import {getTitle} from '@/helpers';
@@ -27,6 +27,6 @@ void createInertiaApp({
     },
 
     setup({ el, App, props, plugin }) {
-        createApp({render: () => h(App, props)}).use(plugin).mount(el);
+        createSSRApp({render: () => h(App, props)}).use(plugin).mount(el);
     },
 });

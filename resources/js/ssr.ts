@@ -1,0 +1,39 @@
+import './bootstrap';
+import '../css/app.css';
+import { Component, createSSRApp, h } from 'vue';
+import { createInertiaApp } from '@inertiajs/vue3';
+import { InertiaPage } from '@/types/Core';
+import { getTitle } from '@/helpers';
+import Layout from '@/Layouts/Layout.vue';
+import createServer from '@inertiajs/vue3/server';
+import { renderToString } from '@vue/server-renderer';
+
+createServer((page) =>
+  createInertiaApp({
+    page,
+    render: renderToString,
+    title: getTitle,
+
+    progress: {
+      color: '#4B5563'
+    },
+
+    resolve: async (name) => {
+      // @ts-ignore
+      const pages: Record<string, () => Promise<() => InertiaPage>> =
+        import.meta.glob('./Pages/**/*.vue');
+
+      // @ts-ignore
+      const page: InertiaPage = await pages[`./Pages/${name}.vue`]();
+
+      page.default.layout = page.default.layout || (Layout as Component);
+
+      return page;
+    },
+
+    setup({ App, props, plugin }) {
+      return createSSRApp({ render: () => h(App, props) }).use(plugin);
+    }
+  }),
+  // { cluster: true },
+);

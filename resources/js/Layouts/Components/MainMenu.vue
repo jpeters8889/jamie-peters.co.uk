@@ -22,7 +22,7 @@ const sidebarOpen = ref(false);
         v-for="item in menuItems()"
         :key="item.label"
         :href="item.href"
-        :active="$page.url === item.href"
+        :active="$page.url === item.href || $page.url.startsWith(`${item.href}/`)"
       >
         {{ item.label }}
       </NavItem>
