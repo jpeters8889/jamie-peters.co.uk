@@ -19,7 +19,7 @@
         "prettier-plugin-tailwindcss": "^0.6.11",
         "puppeteer": "^24.10.2",
         "tailwindcss": "^4.1.8",
-        "vite": "^6.2.4"
+        "vite": "^6.4.1"
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.23",
