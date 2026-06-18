@@ -46,4 +46,16 @@ class BlogPagesTest extends TestCase
             ->assertStatus(200)
             ->assertInertia(fn (Assert $page) => $page->component('Blog/Show'));
     }
+
+    #[Test]
+    public function itRedirectsToTheExternalUrlForAnExternalBlog(): void
+    {
+        $blog = Blog::factory()->create([
+            'external' => true,
+            'redirect_url' => 'https://example.com/external-post',
+        ]);
+
+        $this->get(route('blog.show', $blog))
+            ->assertRedirect('https://example.com/external-post');
+    }
 }

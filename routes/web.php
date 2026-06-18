@@ -10,6 +10,7 @@ use App\Http\Controllers\SpeakingController;
 use App\Http\Controllers\UsesController;
 use App\Http\Controllers\WorkController;
 use App\Models\Blog;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Browsershot\Browsershot;
@@ -20,7 +21,7 @@ Route::prefix('blog')->name('blog.')->group(function (): void {
     Route::get('/', BlogIndexController::class)->name('index');
     Route::get('/{blog}', BlogShowController::class)->name('show');
     Route::get('/{blog}/og-image', function (Blog $blog) {
-        if (config('app.env') !== 'local') {
+        if (App::isLocal() === false) {
             abort(404);
         }
 
@@ -28,7 +29,7 @@ Route::prefix('blog')->name('blog.')->group(function (): void {
     })->name('og-image');
 
     Route::get('/{blog}/make-og-image', function (Blog $blog) {
-        if (config('app.env') !== 'local') {
+        if (App::isLocal() === false) {
             abort(404);
         }
 
@@ -60,7 +61,7 @@ Route::get('uses', UsesController::class)->name('uses');
 Route::get('work-and-projects', WorkController::class)->name('work');
 
 Route::get('og-image', function () {
-    if (config('app.env') !== 'local') {
+    if (App::isLocal() === false) {
         abort(404);
     }
 
@@ -68,7 +69,7 @@ Route::get('og-image', function () {
 })->name('og-image');
 
 Route::get('make-og-image', function () {
-    if (config('app.env') !== 'local') {
+    if (App::isLocal() === false) {
         abort(404);
     }
 

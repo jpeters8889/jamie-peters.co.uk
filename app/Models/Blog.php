@@ -20,9 +20,16 @@ class Blog extends Model
     use HasFactory;
     use HasSlug;
 
-    protected $casts = ['published' => 'bool'];
+    /** @return array<string, string> */
+    protected function casts(): array
+    {
+        return [
+            'published' => 'bool',
+            'external' => 'bool',
+        ];
+    }
 
-    public function getRouteKey()
+    public function getRouteKey(): string
     {
         return $this->slug;
     }
