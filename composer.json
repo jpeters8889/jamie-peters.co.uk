@@ -59,7 +59,7 @@
             "Composer\\Config::disableProcessTimeout",
             "vendor/bin/phpstan analyse --memory-limit 4048M"
         ],
-        "pint": "vendor/bin/pint -vvv",
+        "pint": "vendor/bin/pint",
         "test": "php artisan test --parallel",
         "pre-commit": [
             "Composer\\Config::disableProcessTimeout",

@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -34,7 +34,7 @@ class Blog extends Model
             ->saveSlugsTo('slug');
     }
 
-    /** @return Attribute<Collection<int, string>, never> */
+    /** @return Attribute<Stringable, never> */
     public function body(): Attribute
     {
         return Attribute::get(fn (string $body) => Str::of($body)
