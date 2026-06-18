@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85c6a03e99f2d7e31ebcb497e28b18a0",
+    "content-hash": "3077933c5981b16f85ac0c0719484295",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2112,6 +2112,64 @@
             "time": "2026-06-12T21:33:43+00:00"
         },
         {
+            "name": "hammerstone/sidecar",
+            "version": "v0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aarondfrancis/sidecar.git",
+                "reference": "36a415bdcb71cad5f80876bbe491c5ec827065b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aarondfrancis/sidecar/zipball/36a415bdcb71cad5f80876bbe491c5ec827065b5",
+                "reference": "36a415bdcb71cad5f80876bbe491c5ec827065b5",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.216.1",
+                "guzzlehttp/guzzle": "^6.5.8|^7.2",
+                "illuminate/console": "^8|^9|^10|^11|^12.0|^13.0",
+                "illuminate/filesystem": "^8|^9|^10|^11|^12.0|^13.0",
+                "illuminate/support": "^8|^9|^10|^11|^12.0|^13.0",
+                "maennchen/zipstream-php": "^3.1",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5|^6|^7|^8|^9|^10.0|^11.0",
+                "phpunit/phpunit": ">=8.5.23|^9|^10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hammerstone\\Sidecar\\Providers\\SidecarServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hammerstone\\Sidecar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Laravel package to deploy Lambda functions alongside your main application.",
+            "support": {
+                "issues": "https://github.com/aarondfrancis/sidecar/issues",
+                "source": "https://github.com/aarondfrancis/sidecar/tree/v0.8.0"
+            },
+            "time": "2026-05-31T07:20:41+00:00"
+        },
+        {
             "name": "inertiajs/inertia-laravel",
             "version": "v3.1.0",
             "source": {
@@ -3524,6 +3582,84 @@
                 }
             ],
             "time": "2026-06-02T08:58:52+00:00"
+        },
+        {
+            "name": "maennchen/zipstream-php",
+            "version": "3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maennchen/ZipStream-PHP.git",
+                "reference": "77bebeb4c6c340bb3c11c843b2cffd8bbfde4d5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/77bebeb4c6c340bb3c11c843b2cffd8bbfde4d5e",
+                "reference": "77bebeb4c6c340bb3c11c843b2cffd8bbfde4d5e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-zlib": "*",
+                "php-64bit": "^8.3"
+            },
+            "require-dev": {
+                "brianium/paratest": "^7.7",
+                "ext-zip": "*",
+                "friendsofphp/php-cs-fixer": "^3.86",
+                "guzzlehttp/guzzle": "^7.5",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^12.0",
+                "vimeo/psalm": "^6.0"
+            },
+            "suggest": {
+                "guzzlehttp/psr7": "^2.4",
+                "psr/http-message": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ZipStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Duncan",
+                    "email": "pabs@pablotron.org"
+                },
+                {
+                    "name": "Jonatan Männchen",
+                    "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com"
+                },
+                {
+                    "name": "András Kolesár",
+                    "email": "kolesar@kolesar.hu"
+                }
+            ],
+            "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
+            "keywords": [
+                "stream",
+                "zip"
+            ],
+            "support": {
+                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.2.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/maennchen",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-04-11T18:38:28+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -8654,6 +8790,93 @@
                 }
             ],
             "time": "2026-04-26T05:33:54+00:00"
+        },
+        {
+            "name": "wnx/sidecar-browsershot",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stefanzweifel/sidecar-browsershot.git",
+                "reference": "465168fea66521da38f9da1e7bb64e30e2d024fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stefanzweifel/sidecar-browsershot/zipball/465168fea66521da38f9da1e7bb64e30e2d024fa",
+                "reference": "465168fea66521da38f9da1e7bb64e30e2d024fa",
+                "shasum": ""
+            },
+            "require": {
+                "hammerstone/sidecar": "^0.7.1 | ^0.8.0",
+                "illuminate/contracts": "^12.0 | ^13.0",
+                "php": "^8.4",
+                "spatie/browsershot": "^5.0",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "require-dev": {
+                "ext-imagick": "*",
+                "larastan/larastan": "^3.9",
+                "laravel/pint": "^1.13",
+                "league/flysystem-aws-s3-v3": "^1.0|^2.0|^3.0",
+                "nunomaduro/collision": "^7.0|^8.0",
+                "orchestra/testbench": "^10.0 | ^11.0",
+                "pestphp/pest": "^3.0|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0|^2.0",
+                "phpstan/phpstan-phpunit": "^1.0|^2.0",
+                "phpunit/phpunit": "^11.0 | ^12.0",
+                "spatie/image": "^3.3",
+                "spatie/pixelmatch-php": "^1.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "SidecarBrowsershot": "Wnx\\SidecarBrowsershot\\Facades\\SidecarBrowsershot"
+                    },
+                    "providers": [
+                        "Wnx\\SidecarBrowsershot\\SidecarBrowsershotServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wnx\\SidecarBrowsershot\\": "src",
+                    "Wnx\\SidecarBrowsershot\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Zweifel",
+                    "email": "stefan@stefanzweifel.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Sidecar function to run Browsershot on Lambda.",
+            "homepage": "https://github.com/stefanzweifel/sidecar-browsershot",
+            "keywords": [
+                "browsershot",
+                "lambda",
+                "laravel",
+                "sidecar",
+                "sidecar-browsershot",
+                "wnx"
+            ],
+            "support": {
+                "issues": "https://github.com/stefanzweifel/sidecar-browsershot/issues",
+                "source": "https://github.com/stefanzweifel/sidecar-browsershot/tree/v3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/stefanzweifel",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-05-07T13:55:37+00:00"
         }
     ],
     "packages-dev": [

@@ -17,7 +17,6 @@
         "laravel-vite-plugin": "^1.2.0",
         "prettier": "^3.2.5",
         "prettier-plugin-tailwindcss": "^0.6.11",
-        "puppeteer": "^24.10.2",
         "tailwindcss": "^4.1.8",
         "vite": "^6.2.4"
     },
