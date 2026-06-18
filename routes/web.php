@@ -47,7 +47,8 @@ Route::prefix('blog')->name('blog.')->group(function (): void {
                 ->setNodeBinary($nodeBinary)
                 ->setNpmBinary($npmBinary)
                 ->noSandbox()
-                ->screenshot()
+                ->screenshot(),
+            'public'
         );
 
         return ['done' => 'ok'];

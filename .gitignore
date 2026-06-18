@@ -19,3 +19,8 @@ yarn-error.log
 
 /old
 *.DS_Store
+
+.claude
+.mcp.json
+CLAUDE.md
+boost.json
