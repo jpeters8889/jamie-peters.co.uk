@@ -19,11 +19,29 @@ class PageLoadTest extends TestCase
     }
 
     #[Test]
+    public function it_passes_the_employment_history_and_photo_to_the_homepage(): void
+    {
+        $this->get(route('home'))
+            ->assertStatus(200)
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->component('Home')
+                    ->has('employment', 3)
+                    ->where('employment.0.company', 'Jump24')
+                    ->has('me')
+            );
+    }
+
+    #[Test]
     public function it_loads_the_about_page(): void
     {
         $this->get(route('about'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('About'));
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->component('About')
+                    ->has('me')
+            );
     }
 
     #[Test]
@@ -31,7 +49,11 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('work'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Work'));
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->component('Work')
+                    ->has('employment', 3)
+            );
     }
 
     #[Test]

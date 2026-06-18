@@ -156,6 +156,36 @@ class BlogResourceTest extends TestCase
     }
 
     #[Test]
+    public function itQueuesOgImageWhenEditingTheDescriptionOfAPublishedBlog(): void
+    {
+        $this->actingAs(User::factory()->create());
+
+        $blog = Blog::factory()->create(['published' => true]);
+
+        Livewire::test(EditBlog::class, ['record' => $blog->getRouteKey()])
+            ->fillForm(['description' => 'An updated description'])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        Queue::assertPushed(GenerateBlogOgImage::class, 1);
+    }
+
+    #[Test]
+    public function itDoesNotQueueOgImageWhenEditingAnUnpublishedBlog(): void
+    {
+        $this->actingAs(User::factory()->create());
+
+        $blog = Blog::factory()->create(['published' => false]);
+
+        Livewire::test(EditBlog::class, ['record' => $blog->getRouteKey()])
+            ->fillForm(['title' => 'An updated title'])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        Queue::assertNotPushed(GenerateBlogOgImage::class);
+    }
+
+    #[Test]
     public function itDoesNotQueueOgImageWhenEditingLeavesTheTitleAndDescriptionUnchanged(): void
     {
         $this->actingAs(User::factory()->create());

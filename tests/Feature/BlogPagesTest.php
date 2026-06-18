@@ -78,6 +78,41 @@ class BlogPagesTest extends TestCase
     }
 
     #[Test]
+    public function itShapesTheBlogSnippetForTheList(): void
+    {
+        $blog = Blog::factory()->create([
+            'title' => 'Snippet Post',
+            'published' => true,
+            'created_at' => '2026-01-02 09:00:00',
+        ]);
+
+        $this->get(route('blog.index'))
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->where('blogs.0.title', 'Snippet Post')
+                    ->where('blogs.0.date', '2nd Jan 2026')
+                    ->where('blogs.0.external', false)
+                    ->where('blogs.0.link', route('blog.show', $blog))
+            );
+    }
+
+    #[Test]
+    public function itRendersTheBodyMarkdownAsHtmlOnTheShowPage(): void
+    {
+        $blog = Blog::factory()->create([
+            'published' => true,
+            'body' => '# A Heading',
+        ]);
+
+        $this->get(route('blog.show', $blog))
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->where('blog.body', fn (string $body): bool => str_contains($body, '<h1>A Heading</h1>'))
+                    ->where('blog.link', route('blog.show', $blog))
+            );
+    }
+
+    #[Test]
     public function itRedirectsToTheExternalUrlForAnExternalBlog(): void
     {
         $blog = Blog::factory()->create([
