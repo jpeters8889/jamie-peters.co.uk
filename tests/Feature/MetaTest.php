@@ -18,7 +18,7 @@ class MetaTest extends TestCase
         $this->get(route('home'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->where('meta.title', config('metas.title'))
                     ->where('meta.baseUrl', config('app.url'))
                     ->where('meta.image', Storage::disk('s3')->url('og-image.jpg'))
@@ -32,7 +32,7 @@ class MetaTest extends TestCase
     {
         $this->get(route('about'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->where('meta.title', 'About Me'));
+            ->assertInertia(fn (Assert $page): Assert => $page->where('meta.title', 'About Me'));
     }
 
     #[Test]
@@ -47,7 +47,7 @@ class MetaTest extends TestCase
         $this->get(route('blog.show', $blog))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->where('meta.title', 'A Published Post')
                     ->where('meta.description', 'A short summary of the post.')
                     ->where('meta.image', Storage::disk('s3')->url("{$blog->slug}.jpg"))

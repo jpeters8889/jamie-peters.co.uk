@@ -9,10 +9,12 @@ use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Pages\Dashboard as BaseDashboard;
 use Filament\Support\Icons\Heroicon;
+use Override;
 
 class Dashboard extends BaseDashboard
 {
     /** @return array<Action> */
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

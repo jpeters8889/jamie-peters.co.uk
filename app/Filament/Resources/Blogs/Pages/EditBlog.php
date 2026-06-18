@@ -9,11 +9,13 @@ use App\Jobs\GenerateBlogOgImage;
 use App\Models\Blog;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
+use Override;
 
 class EditBlog extends EditRecord
 {
     protected static string $resource = BlogResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

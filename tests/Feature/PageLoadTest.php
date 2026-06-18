@@ -15,7 +15,7 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('home'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Home'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Home'));
     }
 
     #[Test]
@@ -24,7 +24,7 @@ class PageLoadTest extends TestCase
         $this->get(route('home'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('Home')
                     ->has('employment', 3)
                     ->where('employment.0.company', 'Jump24')
@@ -38,7 +38,7 @@ class PageLoadTest extends TestCase
         $this->get(route('about'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('About')
                     ->has('me')
             );
@@ -50,7 +50,7 @@ class PageLoadTest extends TestCase
         $this->get(route('work'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('Work')
                     ->has('employment', 3)
             );
@@ -61,7 +61,7 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('uses'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Uses'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Uses'));
     }
 
     #[Test]
@@ -69,6 +69,6 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('speaking'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Speaking'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Speaking'));
     }
 }

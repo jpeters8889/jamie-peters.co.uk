@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Override;
 
 class Blog extends Model
 {
@@ -21,6 +22,7 @@ class Blog extends Model
     use HasSlug;
 
     /** @return array<string, string> */
+    #[Override]
     protected function casts(): array
     {
         return [
@@ -29,6 +31,7 @@ class Blog extends Model
         ];
     }
 
+    #[Override]
     public function getRouteKey(): string
     {
         return $this->slug;
@@ -56,6 +59,7 @@ class Blog extends Model
             ->replaceMatches('/(<pre[^>]*>)\s+(<code)/', '$1$2'));
     }
 
+    #[Override]
     public function resolveRouteBinding($value, $field = null): self
     {
         return $this->newQuery()->where('slug', $value)

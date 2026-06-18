@@ -17,7 +17,7 @@ class BlogPagesTest extends TestCase
         $this->get(route('blog.index'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('Blog/Index')
                     ->has('blogs')
             );
@@ -32,7 +32,7 @@ class BlogPagesTest extends TestCase
         $this->get(route('blog.index'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('Blog/Index')
                     ->has('blogs', 1)
             );
@@ -47,7 +47,7 @@ class BlogPagesTest extends TestCase
         $this->get(route('home'))
             ->assertStatus(200)
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->component('Home')
                     ->has('blogs', 1)
             );
@@ -74,7 +74,7 @@ class BlogPagesTest extends TestCase
 
         $this->get(route('blog.show', $blog))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Blog/Show'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Blog/Show'));
     }
 
     #[Test]
@@ -88,7 +88,7 @@ class BlogPagesTest extends TestCase
 
         $this->get(route('blog.index'))
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->where('blogs.0.title', 'Snippet Post')
                     ->where('blogs.0.date', '2nd Jan 2026')
                     ->where('blogs.0.external', false)
@@ -106,7 +106,7 @@ class BlogPagesTest extends TestCase
 
         $this->get(route('blog.show', $blog))
             ->assertInertia(
-                fn (Assert $page) => $page
+                fn (Assert $page): Assert => $page
                     ->where('blog.body', fn (string $body): bool => str_contains($body, '<h1>A Heading</h1>'))
                     ->where('blog.link', route('blog.show', $blog))
             );
