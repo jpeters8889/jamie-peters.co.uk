@@ -24,3 +24,5 @@ yarn-error.log
 .mcp.json
 CLAUDE.md
 boost.json
+
+public/*/filament

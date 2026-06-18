@@ -24,6 +24,36 @@ class BlogPagesTest extends TestCase
     }
 
     #[Test]
+    public function itHidesUnpublishedBlogsFromTheList(): void
+    {
+        Blog::factory()->create(['published' => true]);
+        Blog::factory()->create(['published' => false]);
+
+        $this->get(route('blog.index'))
+            ->assertStatus(200)
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->component('Blog/Index')
+                    ->has('blogs', 1)
+            );
+    }
+
+    #[Test]
+    public function itHidesUnpublishedBlogsFromTheHomepage(): void
+    {
+        Blog::factory()->create(['published' => true]);
+        Blog::factory()->create(['published' => false]);
+
+        $this->get(route('home'))
+            ->assertStatus(200)
+            ->assertInertia(
+                fn (Assert $page) => $page
+                    ->component('Home')
+                    ->has('blogs', 1)
+            );
+    }
+
+    #[Test]
     public function itErrorsIfGoingToAnBlogThatDoesntExist(): void
     {
         $this->get(route('blog.show', ['blog' => 'foo']))->assertNotFound();

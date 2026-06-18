@@ -15,7 +15,7 @@ class HomeController
     public function __invoke(Inertia $inertia, GetWorkHistoryAction $getWorkHistoryAction): Response
     {
         return $inertia->render('Home', [
-            'blogs' => Blog::query()->latest()->take(3)->get()->mapInto(BlogSnippetResource::class),
+            'blogs' => Blog::query()->published()->latest()->take(3)->get()->mapInto(BlogSnippetResource::class),
             'employment' => $getWorkHistoryAction->handle(),
             'me' => asset('images/me-vilt.jpg'),
         ]);
