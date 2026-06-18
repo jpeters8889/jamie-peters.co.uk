@@ -5,24 +5,30 @@ defineProps<{ work: WorkSnippet }>();
 </script>
 
 <template>
-  <div class="flex w-full space-x-5 rounded-xl border border-primary/10 p-2">
-    <div class="w-12">
-      <div
-        class="flex size-12 flex-shrink-0 items-center justify-center rounded-full border border-primary/10 p-2"
-      >
-        <img
-          :src="work.logo"
-          :alt="`${work.company} logo`"
-        />
-      </div>
+  <div
+    class="flex items-center gap-4 rounded-2xl border border-primary/10 bg-white p-4 transition-all duration-300 ease-out-soft hover:border-primary/20 hover:shadow-soft"
+  >
+    <div
+      class="flex size-12 shrink-0 items-center justify-center rounded-xl border border-primary/10 bg-surface p-2"
+    >
+      <img
+        :src="work.logo"
+        :alt="`${work.company} logo`"
+        class="max-h-full max-w-full"
+      />
     </div>
-    <div>
+    <div class="min-w-0">
       <h3
-        class="text-lg font-semibold text-primary"
+        class="truncate font-bold text-ink"
         v-text="work.company"
       />
-      <p v-text="work.role" />
-      <small>{{ work.startDate }} - {{ work.endDate }}</small>
+      <p
+        class="truncate text-sm text-muted"
+        v-text="work.role"
+      />
+      <p class="mt-0.5 font-mono text-xs tracking-tight text-primary-500">
+        {{ work.startDate }} – {{ work.endDate }}
+      </p>
     </div>
   </div>
 </template>

@@ -1,42 +1,56 @@
 <script setup lang="ts">
 import { BlogSnippet } from '@/types/Blogs';
 import { Link } from '@inertiajs/vue3';
+import Badge from '@/Components/Badge.vue';
+import { ArrowUpRightIcon } from '@heroicons/vue/24/solid';
 
 defineProps<{ blog: BlogSnippet }>();
 </script>
 
 <template>
-  <div
-    class="group relative -mx-4 border-b border-primary/10 from-primary/10 to-transparent to-10% px-4 transition hover:border-primary hover:bg-gradient-to-t"
+  <article
+    class="group relative flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-6 shadow-soft transition-all duration-300 ease-out-soft hover:-translate-y-1 hover:border-primary/20 hover:shadow-lift"
   >
     <component
       :is="blog.external ? 'a' : Link"
-      class="absolute h-full w-full"
+      class="absolute inset-0 rounded-2xl"
       :href="blog.link"
-      :target="blog.external ? '_blank' : '_self'"
+      :prefetch="blog.external ? undefined : true"
+      :target="blog.external ? '_blank' : undefined"
+      :rel="blog.external ? 'noopener noreferrer' : undefined"
+      :aria-label="blog.title"
     />
 
+    <div class="mb-4 flex items-center justify-between gap-3">
+      <span class="font-mono text-xs tracking-tight text-muted">
+        {{ blog.date }}
+      </span>
+      <Badge
+        v-if="blog.external"
+        variant="soft"
+        class="relative"
+      >
+        External
+      </Badge>
+    </div>
+
     <h3
-      class="text-lg font-semibold text-primary transition group-hover:text-black"
+      class="text-lg font-bold text-ink transition-colors duration-200 group-hover:text-primary sm:text-xl"
       v-text="blog.title"
     />
 
-    <div class="flex justify-between">
-      <small
-        class="text-xs"
-        v-text="blog.date"
-      />
-      <div
-        v-if="blog.external"
-        class="rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold text-primary transition group-hover:bg-primary group-hover:text-white"
-      >
-        External
-      </div>
-    </div>
-
     <p
-      class="prose my-5"
+      class="mt-3 line-clamp-3 text-sm leading-relaxed text-muted"
       v-text="blog.description"
     />
-  </div>
+
+    <span
+      class="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-primary"
+    >
+      Read
+      <ArrowUpRightIcon
+        class="size-4 transition-transform duration-200 ease-out-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+      />
+    </span>
+  </article>
 </template>

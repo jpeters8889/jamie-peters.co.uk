@@ -49,7 +49,11 @@ class Blog extends Model
                 'renderer' => [
                     'soft_break' => '<br />',
                 ],
-            ])->replace('<?php', "&lt;?php"));
+            ])
+            ->replace('<?php', '&lt;?php')
+            // Collapse whitespace between <pre> and <code> so the first line of
+            // a code block isn't indented by the source HTML's formatting.
+            ->replaceMatches('/(<pre[^>]*>)\s+(<code)/', '$1$2'));
     }
 
     public function resolveRouteBinding($value, $field = null): self

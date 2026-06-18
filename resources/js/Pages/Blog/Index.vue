@@ -1,45 +1,43 @@
 <script setup lang="ts">
-import { BlogSnippet } from '@/types/Blogs';
-import Card from '@/Components/Card.vue';
-import { Link } from '@inertiajs/vue3';
+import { BlogSnippet as BlogSnippetType } from '@/types/Blogs';
+import Section from '@/Components/Section.vue';
+import SectionHeading from '@/Components/SectionHeading.vue';
+import Reveal from '@/Components/Reveal.vue';
+import BlogSnippet from '@/Components/BlogSnippet.vue';
 
-defineProps<{ blogs: BlogSnippet[] }>();
+defineProps<{ blogs: BlogSnippetType[] }>();
 </script>
 
 <template>
-  <Card
-    v-for="blog in blogs"
-    :key="blog.title"
-    class="group relative border-b border-primary/10 from-primary/10 to-transparent to-10% hover:bg-gradient-to-t"
+  <Section
+    tone="gradient"
+    spacing="sm"
+    width="wide"
   >
-    <component
-      :is="blog.external ? 'a' : Link"
-      class="absolute h-full w-full"
-      :href="blog.link"
-      :target="blog.external ? '_blank' : '_self'"
-    />
-
-    <h2
-      class="text-xl font-semibold text-primary transition group-hover:text-black xs:text-2xl lg:text-3xl"
-      v-text="blog.title"
-    />
-
-    <div class="flex justify-between">
-      <small
-        class="text-xs"
-        v-text="blog.date"
-      />
-      <div
-        v-if="blog.external"
-        class="rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold text-primary transition group-hover:bg-primary group-hover:text-white"
+    <Reveal>
+      <SectionHeading
+        eyebrow="Blog"
+        description="Thoughts, tutorials and notes on Laravel, the VILT stack and life as a developer."
+        as="h1"
       >
-        External
-      </div>
-    </div>
+        Writing &amp; articles
+      </SectionHeading>
+    </Reveal>
+  </Section>
 
-    <p
-      class="prose mt-5 mb-10"
-      v-text="blog.description"
-    />
-  </Card>
+  <Section
+    tone="transparent"
+    spacing="md"
+    width="wide"
+  >
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Reveal
+        v-for="(blog, index) in blogs"
+        :key="blog.title"
+        :delay="(index % 3) * 80"
+      >
+        <BlogSnippet :blog="blog" />
+      </Reveal>
+    </div>
+  </Section>
 </template>

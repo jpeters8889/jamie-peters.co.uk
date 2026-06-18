@@ -1,174 +1,256 @@
 <script setup lang="ts">
-import Card from '@/Components/Card.vue';
-import Heading from '@/Components/Heading.vue';
 import { WorkSnippet as WorkSnippetType } from '@/types/Work';
+import { Link } from '@inertiajs/vue3';
+import Section from '@/Components/Section.vue';
+import SectionHeading from '@/Components/SectionHeading.vue';
+import Reveal from '@/Components/Reveal.vue';
 import Project from '@/Components/Project.vue';
 
 defineProps<{ employment: WorkSnippetType[] }>();
 </script>
 
 <template>
-  <Card>
-    <Heading>Work</Heading>
+  <Section
+    tone="gradient"
+    spacing="sm"
+    width="default"
+  >
+    <Reveal>
+      <SectionHeading
+        eyebrow="Work &amp; projects"
+        description="My career so far, plus a few personal projects I build in my spare time."
+        as="h1"
+      >
+        What I've built
+      </SectionHeading>
+    </Reveal>
+  </Section>
 
-    <div
-      class="mx-auto w-full max-w-2xl rounded-2xl border border-primary/10 p-4 md:p-8"
-    >
-      <div
+  <!-- Career timeline -->
+  <Section
+    tone="transparent"
+    spacing="md"
+    width="default"
+  >
+    <Reveal>
+      <SectionHeading eyebrow="Career">Where I've worked</SectionHeading>
+    </Reveal>
+
+    <div class="mt-12 flex flex-col">
+      <Reveal
         v-for="(work, index) in employment"
         :key="work.startDate"
-        class="flex justify-between"
+        class="relative flex gap-5 pb-12 last:pb-0 sm:gap-8"
       >
-        <div class="flex w-16 flex-col sm:w-24">
+        <!-- Timeline rail -->
+        <div
+          v-if="index < employment.length - 1"
+          class="absolute top-14 bottom-0 left-7 w-px -translate-x-1/2 bg-primary/15 sm:top-16 sm:left-8"
+          aria-hidden="true"
+        />
+        <div class="flex flex-col items-center">
           <div
-            class="mr-8 flex size-12 flex-shrink-0 items-center justify-center rounded-full border border-primary/10 p-2 sm:size-16"
+            class="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-primary/10 bg-white p-2.5 shadow-soft sm:size-16"
           >
             <img
               :src="work.logo"
               :alt="`${work.company} logo`"
+              class="max-h-full max-w-full"
             />
           </div>
-          <div
-            class="h-full w-6 border-primary/10 sm:w-8"
-            :class="{ 'border-r': index < employment.length - 1 }"
-          />
         </div>
-        <div class="flex flex-1 flex-col">
+
+        <div class="flex-1 pb-2">
           <div
-            class="flex flex-col border-primary/10 sm:flex-row sm:items-end sm:justify-between sm:border-b sm:pb-1"
+            class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
           >
-            <h2
-              class="text-xl font-semibold text-primary md:text-2xl"
+            <h3
+              class="text-xl font-extrabold tracking-tight text-ink sm:text-2xl"
               v-text="work.company"
             />
-            <small
-              class="font-semibold text-gray-700"
-              v-text="`${work.startDate} - ${work.endDate}`"
-            />
+            <span class="font-mono text-xs tracking-tight text-primary-500">
+              {{ work.startDate }} – {{ work.endDate }}
+            </span>
           </div>
-          <h3
-            class="mt-2 font-semibold sm:text-lg md:text-xl"
+          <p
+            class="mt-1 font-semibold text-primary"
             v-text="work.role"
           />
           <p
-            class="prose mt-6"
-            :class="{ 'mb-12': index < employment.length - 1 }"
+            class="prose mt-4"
             v-text="work.description"
           />
         </div>
-      </div>
+      </Reveal>
     </div>
-  </Card>
+  </Section>
 
-  <Card>
-    <Heading>Personal Projects</Heading>
+  <!-- Personal projects -->
+  <Section
+    tone="white"
+    spacing="md"
+    width="default"
+  >
+    <Reveal>
+      <SectionHeading eyebrow="Side projects">Personal projects</SectionHeading>
+    </Reveal>
 
-    <div class="flex w-full flex-col space-y-5">
-      <Project
-        title="Coeliac Sanctuary"
-        :links="[
-          {
-            label: 'www.coeliacsanctuary.co.uk',
-            url: 'https://www.coeliacsanctuary.co.uk',
-          },
-          {
-            label: 'www.github.com/coeliacsanctuary/coeliacsanctuary.co.uk',
-            url: 'https://www.github.com/coeliacsanctuary/coeliacsanctuary.co.uk',
-          },
-        ]"
-      >
-        <p class="prose">
-          Coeliac Sanctuary is a blog/business owned by my wife, it serves the
-          Coeliac community in the UK (People who can’t eat gluten) while she
-          looks after content, marketing and social media. I am responsible for
-          the entire backend, infrastructure, hosting, and constantly creating
-          new features.
-        </p>
-        <p class="prose">
-          It started as a Vanilla PHP website but was rewritten in Laravel and
-          the current version was launched in 2020.
-        </p>
-        <p class="prose">
-          The website includes blogs, recipes, eating out guide with the ability
-          for visitors to the website to leave reviews on different eateries
-          around the UK, and an online shop that utilises APIs from Stripe and
-          PayPal to handle payments.
-        </p>
-        <p class="prose">
-          In late 2021 a mobile app launched, developed in React Native, the app
-          is used to show places to eat from the eating out guide, on a map
-          around a users location, the app is available on the Google Play store
-          and Apple Store, and the app code is available on
-          <a
-            href="https://github.com/coeliacsanctuary/coeliac-sanctuary-on-the-go-3"
-            target="_blank"
-          >
-            Github </a
-          >.
-        </p>
-        <p class="prose">
-          Over the past couple of years in my spare time I have been rebuilding
-          the application from the ground up as a full Laravel, Inertia and Vue
-          app with SSR and SEO in mind, including a heavily customised
-          TailwindCSS configuration, and custom Inertia request handler for
-          adding convenience methods to easily add things like page titles, meta
-          content, etc.
-        </p>
-        <p class="prose">
-          The code base for the new website can be explored in the Github link
-          above.
-        </p>
-      </Project>
+    <div class="mt-10 flex flex-col gap-6">
+      <Reveal>
+        <Project
+          title="Coeliac Sanctuary"
+          :links="[
+            {
+              label: 'www.coeliacsanctuary.co.uk',
+              url: 'https://www.coeliacsanctuary.co.uk',
+            },
+            {
+              label: 'github.com/coeliacsanctuary/coeliacsanctuary.co.uk',
+              url: 'https://github.com/coeliacsanctuary/coeliacsanctuary.co.uk',
+            },
+            {
+              label: 'github.com/coeliacsanctuary/gluten-free-on-the-go',
+              url: 'https://github.com/coeliacsanctuary/gluten-free-on-the-go',
+            },
+          ]"
+        >
+          <p>
+            Coeliac Sanctuary is a UK website and mobile app serving the coeliac
+            community. While my wife looks after content, marketing and social
+            media, I'm responsible for the entire technical platform — backend
+            development, infrastructure, hosting and ongoing feature
+            development.
+          </p>
+          <p>
+            Originally launched in 2014 as a vanilla PHP website, the platform
+            has been through several major rewrites over the years. The current
+            version is a full rebuild on a modern VILT stack — Laravel, Inertia,
+            Vue and Tailwind — with server-side rendering and a heavily
+            customised Tailwind configuration. It launched in August 2025.
+          </p>
+          <p>
+            The site includes blogs, recipes, an eating out guide where visitors
+            can review gluten-free eateries across the UK, and an online shop
+            powered by Stripe. It receives anywhere from 1,000 to
+            1,500 visitors a day — mostly using the eating out guide and map —
+            so performance, query optimisation and efficient rendering are
+            central to the architecture.
+          </p>
+          <p>
+            Rebuilding it from scratch became a labour of love spread across
+            roughly two and a half years of spare time — time that grew a lot
+            scarcer once I became a first-time father in 2024 — and it pushed me
+            to explore Laravel far more deeply than most projects ever call for. The result leans on features many apps barely
+            scratch the surface of: Laravel pipelines power the entire eating out
+            section, a dynamic,
+            <Link
+              href="/blog/self-clearing-static-cache-in-laravel"
+              prefetch
+              >self-clearing cache</Link
+            >
+            keeps everything fast, and a
+            <Link
+              href="/blog/the-inertiajs-response-handler-you-didnt-know-you-needed-until-now"
+              prefetch
+              >custom Inertia response handler</Link
+            >
+            gives every page a consistent layout.
+          </p>
+          <p>
+            Alongside the website I've built a React Native mobile app —
+            released in October 2025 and powered by versioned APIs — that lets
+            users find places to eat on a map around their location. It's
+            available on both the
+            <a
+              href="https://apps.apple.com/gb/app/gluten-free-on-the-go/id1608694621"
+              target="_blank"
+              >App Store</a
+            >
+            and
+            <a
+              href="https://play.google.com/store/apps/details?id=com.coeliacsanctuary.onthego"
+              target="_blank"
+              >Google Play</a
+            >.
+          </p>
+          <p>
+            Behind the scenes it runs on DigitalOcean managed with Laravel
+            Forge, with a custom-built admin panel, background processing
+            via Laravel Horizon, object storage on Amazon S3, and transactional
+            email and newsletters handled through Amazon SES and a Spatie
+            Mailcoach instance hosted on Laravel Cloud.
+          </p>
+        </Project>
+      </Reveal>
 
-      <Project
-        title="PHPUnit Code Assertions"
-        :links="[
-          {
-            label: 'www.github.com/jpeters8889/phpunit-code-assertions',
-            url: 'https://www.github.com/jpeters8889/phpunit-code-assertions',
-          },
-        ]"
-      >
-        <p class="prose">
-          Inspired by the PestPHP Arch Testing plugin, I wanted to explore ways
-          to perform similar tests in a PHPUnit test suite, including ways to
-          check for forgotten debug statements, ensure class structure and
-          naming, and various over project level rules.
-        </p>
+      <Reveal>
+        <Project
+          title="PHPUnit Code Assertions"
+          :links="[
+            {
+              label: 'github.com/jpeters8889/phpunit-code-assertions',
+              url: 'https://github.com/jpeters8889/phpunit-code-assertions',
+            },
+            {
+              label: 'packagist.org/packages/jpeters8889/phpunit-code-assertions',
+              url: 'https://packagist.org/packages/jpeters8889/phpunit-code-assertions',
+            },
+          ]"
+        >
+          <p>
+            PestPHP's architecture testing is genuinely brilliant — but I prefer
+            to stay in PHPUnit, so I built my own. It's a package of fluent,
+            expressive code and architecture assertions for a PHPUnit test
+            suite: you extend a base test case and chain readable rules over a
+            directory of code. Under the hood it parses each file into an
+            abstract syntax tree with <code>nikic/php-parser</code>, so the
+            assertions inspect real code structure rather than matching text.
+          </p>
+          <p>
+            It covers both code-level checks — banning stray
+            <code>dd()</code> / <code>dump()</code> calls or enforcing strict
+            types — and class-level rules, asserting that classes are
+            <code>final</code>, <code>abstract</code> or <code>readonly</code>,
+            implement the right interfaces and traits, are invokable, or follow
+            naming conventions such as a required <code>Controller</code> suffix.
+          </p>
+          <p>
+            I've never really promoted it, but it's become a quiet staple
+            across several of my own projects. On Coeliac Sanctuary alone it
+            <a
+              href="https://github.com/coeliacsanctuary/coeliacsanctuary.co.uk/blob/main/tests/Code/CodeArchitectureTest.php"
+              target="_blank"
+              >enforces consistent conventions right across the codebase</a
+            >
+            — actions, controllers, jobs, resources, pipeline steps, mailables
+            and far more — and after the best part of a year in production it's
+            caught more than a few issues before they reached deployment.
+          </p>
+        </Project>
+      </Reveal>
 
-        <p class="prose">
-          While you can get a similar result with various different PHPStan or
-          PHP CS Fixer rules, there was nothing to write an expressive test on
-          code quality like in PestPHP.
-        </p>
-
-        <p class="prose">
-          You can see the package being used in
-          <a
-            href="https://github.com/coeliacsanctuary/coeliacsanctuary.co.uk/blob/main/tests/Code/CodeArchitectureTest.php"
-            target="_blank"
-          >
-            this test
-          </a>
-          within the new Coeliac Sanctuary codebase.
-        </p>
-      </Project>
-
-      <Project
-        title="This website"
-        :links="[
-          {
-            label: 'www.github.com/jpeters8889/jamie-peters.co.uk',
-            url: 'https://www.github.com/jpeters8889/jamie-peters.co.uk',
-          },
-        ]"
-      >
-        <p class="prose">
-          This website is also a small VILT app hosted on Laravel Cloud, while
-          it's not as big or as comprehensive as some of my other apps past and
-          present, it still sticks to the tech stack that brings me so much joy.
-        </p>
-      </Project>
+      <Reveal>
+        <Project
+          title="This website"
+          :links="[
+            {
+              label: 'github.com/jpeters8889/jamie-peters.co.uk',
+              url: 'https://github.com/jpeters8889/jamie-peters.co.uk',
+            },
+          ]"
+        >
+          <p>
+            This very site is a small VILT app — Laravel, Inertia, Vue and
+            Tailwind — with server-side rendering, hosted on Laravel Cloud. It's
+            deliberately lightweight, but it's a fun playground for the stack I
+            love, with a markdown-driven blog, syntax-highlighted code samples,
+            and a recent ground-up redesign.
+          </p>
+          <p>
+            The full source is on GitHub if you'd like a look under the hood.
+          </p>
+        </Project>
+      </Reveal>
     </div>
-  </Card>
+  </Section>
 </template>
