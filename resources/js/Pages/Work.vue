@@ -69,7 +69,7 @@ defineProps<{ employment: WorkSnippetType[] }>();
               v-text="work.company"
             />
             <span class="font-mono text-xs tracking-tight text-primary-500">
-              {{ work.startDate }} – {{ work.endDate }}
+              {{ work.startDate }} - {{ work.endDate }}
             </span>
           </div>
           <p
@@ -117,29 +117,32 @@ defineProps<{ employment: WorkSnippetType[] }>();
           <p>
             Coeliac Sanctuary is a UK website and mobile app serving the coeliac
             community. While my wife looks after content, marketing and social
-            media, I'm responsible for the entire technical platform — backend
+            media, I'm responsible for the entire technical platform - backend
             development, infrastructure, hosting and ongoing feature
             development.
           </p>
+
           <p>
             Originally launched in 2014 as a vanilla PHP website, the platform
             has been through several major rewrites over the years. The current
-            version is a full rebuild on a modern VILT stack — Laravel, Inertia,
-            Vue and Tailwind — with server-side rendering and a heavily
+            version is a full rebuild on a modern VILT stack - Laravel, Inertia,
+            Vue and Tailwind - with server-side rendering and a heavily
             customised Tailwind configuration. It launched in August 2025.
           </p>
+
           <p>
             The site includes blogs, recipes, an eating out guide where visitors
             can review gluten-free eateries across the UK, and an online shop
             powered by Stripe. It receives anywhere from 1,000 to
-            1,500 visitors a day — mostly using the eating out guide and map —
+            1,500 visitors a day - mostly using the eating out guide and map -
             so performance, query optimisation and efficient rendering are
             central to the architecture.
           </p>
+
           <p>
             Rebuilding it from scratch became a labour of love spread across
-            roughly two and a half years of spare time — time that grew a lot
-            scarcer once I became a first-time father in 2024 — and it pushed me
+            roughly two and a half years of spare time - time that grew a lot
+            scarcer once I became a first-time father in 2024 - and it pushed me
             to explore Laravel far more deeply than most projects ever call for. The result leans on features many apps barely
             scratch the surface of: Laravel pipelines power the entire eating out
             section, a dynamic,
@@ -156,9 +159,10 @@ defineProps<{ employment: WorkSnippetType[] }>();
             >
             gives every page a consistent layout.
           </p>
+
           <p>
-            Alongside the website I've built a React Native mobile app —
-            released in October 2025 and powered by versioned APIs — that lets
+            Alongside the website I've built a React Native mobile app -
+            released in October 2025 and powered by versioned APIs - that lets
             users find places to eat on a map around their location. It's
             available on both the
             <a
@@ -173,6 +177,7 @@ defineProps<{ employment: WorkSnippetType[] }>();
               >Google Play</a
             >.
           </p>
+
           <p>
             Behind the scenes it runs on DigitalOcean managed with Laravel
             Forge, with a custom-built admin panel, background processing
@@ -198,7 +203,7 @@ defineProps<{ employment: WorkSnippetType[] }>();
           ]"
         >
           <p>
-            PestPHP's architecture testing is genuinely brilliant — but I prefer
+            PestPHP's architecture testing is genuinely brilliant - but I prefer
             to stay in PHPUnit, so I built my own. It's a package of fluent,
             expressive code and architecture assertions for a PHPUnit test
             suite: you extend a base test case and chain readable rules over a
@@ -206,14 +211,16 @@ defineProps<{ employment: WorkSnippetType[] }>();
             abstract syntax tree with <code>nikic/php-parser</code>, so the
             assertions inspect real code structure rather than matching text.
           </p>
+
           <p>
-            It covers both code-level checks — banning stray
+            It covers both code-level checks - banning stray
             <code>dd()</code> / <code>dump()</code> calls or enforcing strict
-            types — and class-level rules, asserting that classes are
+            types - and class-level rules, asserting that classes are
             <code>final</code>, <code>abstract</code> or <code>readonly</code>,
             implement the right interfaces and traits, are invokable, or follow
             naming conventions such as a required <code>Controller</code> suffix.
           </p>
+
           <p>
             I've never really promoted it, but it's become a quiet staple
             across several of my own projects. On Coeliac Sanctuary alone it
@@ -222,8 +229,8 @@ defineProps<{ employment: WorkSnippetType[] }>();
               target="_blank"
               >enforces consistent conventions right across the codebase</a
             >
-            — actions, controllers, jobs, resources, pipeline steps, mailables
-            and far more — and after the best part of a year in production it's
+            - actions, controllers, jobs, resources, pipeline steps, mailables
+            and far more - and after the best part of a year in production it's
             caught more than a few issues before they reached deployment.
           </p>
         </Project>
@@ -240,12 +247,13 @@ defineProps<{ employment: WorkSnippetType[] }>();
           ]"
         >
           <p>
-            This very site is a small VILT app — Laravel, Inertia, Vue and
-            Tailwind — with server-side rendering, hosted on Laravel Cloud. It's
+            This very site is a small VILT app - Laravel, Inertia, Vue and
+            Tailwind - with server-side rendering, hosted on Laravel Cloud. It's
             deliberately lightweight, but it's a fun playground for the stack I
             love, with a markdown-driven blog, syntax-highlighted code samples,
             and a recent ground-up redesign.
           </p>
+
           <p>
             The full source is on GitHub if you'd like a look under the hood.
           </p>

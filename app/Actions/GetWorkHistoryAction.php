@@ -33,7 +33,7 @@ class GetWorkHistoryAction
                 'Coeliac Sanctuary',
                 asset('images/articles/work/coeliac-sanctuary.svg'),
                 'Lead Developer',
-                'A UK website and mobile app serving the coeliac community, run by my wife. I own the entire technical platform — backend, infrastructure, hosting and ongoing feature development — most recently rebuilding it from the ground up on a modern VILT stack.',
+                'A UK website and mobile app serving the coeliac community, run by my wife. I own the entire technical platform - backend, infrastructure, hosting and ongoing feature development - most recently rebuilding it from the ground up on a modern VILT stack.',
                 'Aug 2014',
                 'Present',
             ),

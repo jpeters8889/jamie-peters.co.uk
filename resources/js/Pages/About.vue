@@ -34,7 +34,7 @@ const skills = [
     <Reveal>
       <SectionHeading
         eyebrow="About me"
-        description="Developer, musician, husband and dad — here's a little more about who I am."
+        description="Developer, musician, husband and dad - here's a little more about who I am."
         as="h1"
       >
         All about me
@@ -77,10 +77,11 @@ const skills = [
             <strong>Laravel and PHP</strong>, having worked with the framework
             daily for many years. I follow a
             <strong>test-driven development</strong> approach, writing thorough
-            test suites with <strong>PHPUnit</strong> — and
-            <strong>Pest</strong> where a project calls for it — to ensure the
+            test suites with <strong>PHPUnit</strong> - and
+            <strong>Pest</strong> where a project calls for it - to ensure the
             reliability and maintainability of every feature I build.
           </p>
+
           <p>
             Code quality is a key focus of mine. I maintain strict coding
             standards and integrate tools like
@@ -88,6 +89,7 @@ const skills = [
             <strong>Larastan</strong> into my workflows to enforce consistency
             and catch issues early.
           </p>
+
           <p>
             On the frontend, I work primarily with <strong>Vue.js</strong>,
             using <strong>Inertia.js</strong> to deliver modern, single-page
@@ -96,18 +98,20 @@ const skills = [
             <strong>Tailwind CSS</strong>, which allows me to prototype rapidly
             while keeping designs consistent and polished.
           </p>
+
           <p>
             While the VILT stack is where I feel most at home, I'm comfortable
             working beyond it. I've built and shipped a full production mobile
             app with <strong>React Native</strong> and <strong>Expo</strong>,
-            and I'm happy working in existing <strong>React</strong> codebases —
+            and I'm happy working in existing <strong>React</strong> codebases -
             many of the concepts carry over naturally from Vue. More recently
             I've become a big fan of <strong>Filament</strong>, which I reach for
             when building polished admin panels and internal tools.
           </p>
+
           <p>
             For deployment, <strong>Laravel Cloud</strong> has become my
-            default for new projects — as it's matured it's proven a genuinely
+            default for new projects - as it's matured it's proven a genuinely
             compelling, fully-managed option that scales comfortably where a
             traditional VPS would start to struggle, and it pairs brilliantly
             with its new managed queues. I now run a growing number of apps on
@@ -120,18 +124,21 @@ const skills = [
             <strong>Docker</strong>, I prefer using <strong>Laravel Herd</strong>
             for fast, streamlined local development.
           </p>
+
           <blockquote>
             I first started learning <strong>PHP in 2005</strong> and never
             looked back. Watching the language evolve over the past 20 years has
             been amazing. I discovered <strong>Laravel in 2018</strong>, and it
             completely changed how I write my web apps.
           </blockquote>
+
           <p>
             Outside of development, I'm a keen amateur musician. I've been
             playing guitar since 2009 and love to play along to some of my
             favourite songs. In 2025, I also started to learn to play keyboard,
             expanding my love of music even further.
           </p>
+
           <p>
             Most importantly, I also love spending time with my wife and our
             little girl who was born in 2024.

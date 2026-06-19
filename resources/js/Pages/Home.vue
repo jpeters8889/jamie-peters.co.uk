@@ -29,7 +29,7 @@ const toolbox = [
   {
     name: 'React',
     detail:
-      'Comfortable working in existing React codebases — the concepts carry over nicely from Vue.',
+      'Comfortable working in existing React codebases - the concepts carry over nicely from Vue.',
   },
   {
     name: 'Filament',
@@ -75,7 +75,7 @@ const toolbox = [
             <strong class="font-semibold text-ink">Laravel</strong>,
             <strong class="font-semibold text-ink">Vue</strong>,
             <strong class="font-semibold text-ink">Inertia</strong> and
-            <strong class="font-semibold text-ink">Tailwind</strong> — building
+            <strong class="font-semibold text-ink">Tailwind</strong> - building
             fast, clean and scalable web platforms.
           </p>
 
@@ -105,6 +105,7 @@ const toolbox = [
             class="pointer-events-none absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-full bg-primary/15 blur-2xl"
             aria-hidden="true"
           />
+
           <div
             class="aspect-square w-56 overflow-hidden rounded-full ring-4 ring-white sm:w-72 lg:w-80"
           >
@@ -136,17 +137,18 @@ const toolbox = [
         >
           My core stack
         </p>
+
         <div class="mt-4 flex flex-wrap gap-3">
           <span
             v-for="tech in coreStack"
             :key="tech"
             class="rounded-xl border border-primary/15 bg-primary/5 px-5 py-3 text-base font-bold tracking-tight text-primary"
-          >
-            {{ tech }}
-          </span>
+            v-text="tech"
+          />
         </div>
+
         <p class="mt-3 text-sm text-muted">
-          The VILT stack — my day to day, and what I reach for first.
+          The VILT stack - my day to day, and what I reach for first.
         </p>
       </div>
     </Reveal>
@@ -158,6 +160,7 @@ const toolbox = [
         >
           Also in my toolbox
         </p>
+
         <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div
             v-for="tool in toolbox"
@@ -168,6 +171,7 @@ const toolbox = [
               class="font-bold text-ink"
               v-text="tool.name"
             />
+
             <p
               class="mt-1.5 text-sm leading-relaxed text-muted"
               v-text="tool.detail"
@@ -221,6 +225,7 @@ const toolbox = [
           >
           to create fast, clean and scalable web platforms.
         </p>
+
         <p>
           I am originally from South Yorkshire, but now live in South Cheshire.
         </p>
@@ -237,6 +242,7 @@ const toolbox = [
     <Reveal>
       <div class="flex flex-wrap items-end justify-between gap-4">
         <SectionHeading eyebrow="Blog">My writings</SectionHeading>
+
         <Button
           href="/blog"
           variant="ghost"
@@ -268,6 +274,7 @@ const toolbox = [
     <Reveal>
       <div class="flex flex-wrap items-end justify-between gap-4">
         <SectionHeading eyebrow="Career">Where I've worked</SectionHeading>
+
         <Button
           href="/work-and-projects"
           variant="ghost"
@@ -304,15 +311,18 @@ const toolbox = [
           class="pointer-events-none absolute -top-16 -right-16 size-64 rounded-full bg-white/10 blur-3xl"
           aria-hidden="true"
         />
+
         <h2
           class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
         >
           Thanks for stopping by
         </h2>
+
         <p class="mx-auto mt-4 max-w-xl text-primary-100">
-          Feel free to look around, read the blog, or drop me a line — it's
+          Feel free to look around, read the blog, or drop me a line - it's
           always nice to hear from people.
         </p>
+
         <div class="mt-8 flex justify-center">
           <Button
             href="mailto:jamie@jamie-peters.co.uk"

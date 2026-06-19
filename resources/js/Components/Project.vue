@@ -28,7 +28,11 @@ defineProps<{
           rel="noopener noreferrer"
           class="group inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-800 md:justify-end"
         >
-          <span class="truncate">{{ link.label }}</span>
+          <span
+            class="truncate"
+            v-text="link.label"
+          />
+
           <ArrowUpRightIcon
             class="size-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />

@@ -25,6 +25,7 @@ defineProps<{ blog: BlogSnippet }>();
       <span class="font-mono text-xs tracking-tight text-muted">
         {{ blog.date }}
       </span>
+
       <Badge
         v-if="blog.external"
         variant="soft"

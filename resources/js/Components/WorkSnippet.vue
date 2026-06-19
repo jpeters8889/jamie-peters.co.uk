@@ -17,17 +17,20 @@ defineProps<{ work: WorkSnippet }>();
         class="max-h-full max-w-full"
       />
     </div>
+
     <div class="min-w-0">
       <h3
         class="truncate font-bold text-ink"
         v-text="work.company"
       />
+
       <p
         class="truncate text-sm text-muted"
         v-text="work.role"
       />
+
       <p class="mt-0.5 font-mono text-xs tracking-tight text-primary-500">
-        {{ work.startDate }} – {{ work.endDate }}
+        {{ work.startDate }} - {{ work.endDate }}
       </p>
     </div>
   </div>

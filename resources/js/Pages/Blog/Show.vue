@@ -43,6 +43,7 @@ onMounted(() => {
       >
         {{ blog.date }}
       </p>
+
       <h1
         class="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
         v-text="blog.title"

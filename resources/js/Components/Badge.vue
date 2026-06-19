@@ -2,7 +2,7 @@
 withDefaults(
   defineProps<{
     variant?: 'soft' | 'solid' | 'outline';
-    /** Use the monospace face — good for dates and labels. */
+    /** Use the monospace face - good for dates and labels. */
     mono?: boolean;
   }>(),
   { variant: 'soft', mono: false },

@@ -23,8 +23,10 @@ defineEmits(['close']);
         >
           <span
             class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-extrabold text-white"
-            >JP</span
-          >
+            >
+            JP
+          </span>
+
           Jamie Peters
         </span>
       </div>

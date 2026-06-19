@@ -18,14 +18,17 @@ import { menuItems } from '@/helpers';
           >
             <span
               class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-extrabold text-white"
-              >JP</span
-            >
+              >
+              JP
+            </span>
+
             Jamie Peters
           </Link>
           <p class="mt-3 text-sm text-muted">
-            Full-stack developer specialising in the VILT stack — Laravel, Vue,
+            Full-stack developer specialising in the VILT stack - Laravel, Vue,
             Inertia &amp; Tailwind.
           </p>
+
           <div class="mt-5">
             <SocialLinks size="sm" />
           </div>
@@ -53,6 +56,7 @@ import { menuItems } from '@/helpers';
           <strong class="font-semibold text-ink">Inertia</strong>, styled with
           <strong class="font-semibold text-ink">Tailwind CSS</strong>.
         </p>
+
         <p>
           Proudly hosted on
           <strong class="font-semibold text-ink">Laravel Cloud</strong>.

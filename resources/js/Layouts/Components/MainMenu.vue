@@ -17,6 +17,7 @@ const onScroll = () => {
 
 onMounted(() => {
   onScroll();
+
   window.addEventListener('scroll', onScroll, { passive: true });
 });
 
@@ -38,13 +39,14 @@ onBeforeUnmount(() => {
       <nav class="flex h-16 items-center justify-between gap-4 sm:h-20">
         <Link
           href="/"
-          aria-label="Jamie Peters — home"
+          aria-label="Jamie Peters - home"
           class="group flex items-center"
         >
           <span
             class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-extrabold text-white transition-colors group-hover:bg-primary-800"
-            >JP</span
-          >
+            >
+            JP
+          </span>
         </Link>
 
         <ul class="hidden items-center gap-1 xs:flex">

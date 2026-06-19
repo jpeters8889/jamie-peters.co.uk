@@ -46,8 +46,9 @@ import Badge from '@/Components/Badge.vue';
             <Badge
               variant="soft"
               mono
-              >PHP Stoke</Badge
-            >
+              >
+              PHP Stoke
+            </Badge>
             <span class="font-mono text-xs tracking-tight text-muted">
               October 2024
             </span>
@@ -61,10 +62,10 @@ import Badge from '@/Components/Badge.vue';
 
           <p class="prose mt-5">
             In October 2024, I gave a talk at the PHP Stoke meetup on writing
-            clean, maintainable code — covering everything from variable naming
+            clean, maintainable code - covering everything from variable naming
             and early returns to code style, readability, and practical
             refactoring tips. The event was organised by Laravel's Head of
-            Engineering, James Brooks.
+            Enterprise Enablement, James Brooks.
           </p>
         </div>
       </article>
@@ -76,7 +77,7 @@ import Badge from '@/Components/Badge.vue';
       >
         <p class="prose mx-auto max-w-xl">
           I'm interested in speaking at other local Laravel and/or PHP meetups
-          in the UK — please
+          in the UK - please
           <a href="mailto:jamie@jamie-peters.co.uk">get in touch</a> if you'd
           like to know more.
         </p>

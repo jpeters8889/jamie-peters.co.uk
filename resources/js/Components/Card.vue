@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    /** Enable a hover lift — use for interactive/linked cards. */
+    /** Enable a hover lift - use for interactive/linked cards. */
     hover?: boolean;
     padding?: 'none' | 'sm' | 'md' | 'lg';
   }>(),

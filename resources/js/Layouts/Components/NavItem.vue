@@ -17,6 +17,7 @@ withDefaults(defineProps<MenuItemProps>(), { active: false });
         class="absolute inset-0 rounded-full bg-primary/10 transition-all duration-300 ease-out-soft"
         :class="active ? 'scale-100 opacity-100' : 'scale-90 opacity-0'"
       />
+
       <span class="relative">
         <slot />
       </span>
