@@ -199,8 +199,14 @@
 }
 
 @layer utilities {
-  /* Scroll-reveal primitive — driven by IntersectionObserver in useReveal() */
-  .reveal {
+  /*
+   * Scroll-reveal primitive - driven by IntersectionObserver in useReveal().
+   * The hidden state is gated behind `.js` (set on <html> by an inline script
+   * in app.blade.php) so that if JS never runs - disabled, the bundle fails to
+   * load, or hydration throws before mount - the content stays fully visible
+   * instead of being stuck at opacity 0.
+   */
+  .js .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -209,14 +215,14 @@
     will-change: opacity, transform;
   }
 
-  .reveal.is-visible {
+  .js .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    .reveal.is-visible {
+    .js .reveal,
+    .js .reveal.is-visible {
       opacity: 1;
       transform: none;
       transition: none;
@@ -229,7 +235,7 @@
  *
  * These rules are intentionally UNLAYERED (outside @layer). Prism's stylesheet
  * is injected unlayered, and in the cascade unlayered rules beat layered ones
- * regardless of specificity — so anything inside @layer components/utilities
+ * regardless of specificity, so anything inside @layer components/utilities
  * loses to Prism. Keeping these unlayered (and more specific than Prism's own
  * `pre[class*="language-"]`) lets them win cleanly without !important.
  */
