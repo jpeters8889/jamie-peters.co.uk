@@ -24,5 +24,6 @@ yarn-error.log
 .mcp.json
 CLAUDE.md
 boost.json
+.ai/skills/deploying-laravel-cloud/
 
 public/*/filament
