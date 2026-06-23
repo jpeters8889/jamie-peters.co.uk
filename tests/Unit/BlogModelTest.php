@@ -20,6 +20,28 @@ class BlogModelTest extends TestCase
     }
 
     #[Test]
+    public function itEscapesOpeningPhpTagsInTheBody(): void
+    {
+        $blog = Blog::factory()->create(['body' => '<pre><code>&lt;?php echo "hi";</code></pre>']);
+
+        $this->assertStringContainsString('&lt;?php', (string) $blog->body);
+        $this->assertStringNotContainsString('<?php', (string) $blog->body);
+    }
+
+    #[Test]
+    public function itCollapsesWhitespaceBetweenPreAndCodeTags(): void
+    {
+        $body = <<<'HTML'
+            <pre class="line-numbers">
+                <code class="language-php">echo "hi";</code></pre>
+            HTML;
+
+        $blog = Blog::factory()->create(['body' => $body]);
+
+        $this->assertStringContainsString('<pre class="line-numbers"><code', (string) $blog->body);
+    }
+
+    #[Test]
     public function itHasAPublishedScope(): void
     {
         Blog::factory()

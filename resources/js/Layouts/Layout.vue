@@ -7,14 +7,12 @@ defineProps<{ meta: MetaProps }>();
 </script>
 
 <template>
-  <div
-    class="relative mx-auto flex min-h-screen max-w-5xl flex-col bg-white shadow-md"
-  >
+  <div class="flex min-h-screen flex-col bg-surface">
     <Header :metas="meta" />
 
-    <div class="mt-10 flex flex-1 flex-col space-y-10">
+    <main class="flex-1">
       <slot />
-    </div>
+    </main>
 
     <Footer />
   </div>

@@ -17,19 +17,18 @@
         "laravel-vite-plugin": "^1.2.0",
         "prettier": "^3.2.5",
         "prettier-plugin-tailwindcss": "^0.6.11",
-        "puppeteer": "^24.10.2",
         "tailwindcss": "^4.1.8",
         "vite": "^6.2.4"
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.23",
         "@heroicons/vue": "^2.0.14",
-        "@inertiajs/core": "^1.0.9",
+        "@inertiajs/core": "^3.4.0",
+        "@inertiajs/vue3": "^3.4.0",
         "@rushstack/eslint-patch": "^1.10.2",
         "@types/prismjs": "^1.26.5",
         "@vue/eslint-config-typescript": "^13.0.0",
         "@vue/server-renderer": "^3.5.17",
-        "laravel-precognition-vue-inertia": "^0.6.0",
         "prismjs": "^1.30.0",
         "vue": "^3.4.26"
     }

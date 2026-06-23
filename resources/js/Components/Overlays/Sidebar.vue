@@ -25,11 +25,14 @@ const isMounted = ref(false);
 
 onMounted(() => {
   isMounted.value = true;
-})
+});
 </script>
 
 <template>
-  <Teleport to="body" v-if="isMounted">
+  <Teleport
+    to="body"
+    v-if="isMounted"
+  >
     <TransitionRoot
       :show="open"
       as="template"

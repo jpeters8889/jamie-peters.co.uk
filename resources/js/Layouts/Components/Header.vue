@@ -9,7 +9,5 @@ defineProps<{ metas: MetaProps }>();
 <template>
   <Metas :metas="metas" />
 
-  <div class="mx-auto w-full max-w-5xl">
-    <MainMenu />
-  </div>
+  <MainMenu />
 </template>

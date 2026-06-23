@@ -8,32 +8,33 @@ import Layout from '@/Layouts/Layout.vue';
 import createServer from '@inertiajs/vue3/server';
 import { renderToString } from '@vue/server-renderer';
 
-createServer((page) =>
-  createInertiaApp({
-    page,
-    render: renderToString,
-    title: getTitle,
+createServer(
+  (page) =>
+    createInertiaApp({
+      page,
+      render: renderToString,
+      title: getTitle,
 
-    progress: {
-      color: '#4B5563'
-    },
+      progress: {
+        color: '#1f4e79',
+      },
 
-    resolve: async (name) => {
-      // @ts-ignore
-      const pages: Record<string, () => Promise<() => InertiaPage>> =
-        import.meta.glob('./Pages/**/*.vue');
+      resolve: async (name) => {
+        // @ts-ignore
+        const pages: Record<string, () => Promise<() => InertiaPage>> =
+          import.meta.glob('./Pages/**/*.vue');
 
-      // @ts-ignore
-      const page: InertiaPage = await pages[`./Pages/${name}.vue`]();
+        // @ts-ignore
+        const page: InertiaPage = await pages[`./Pages/${name}.vue`]();
 
-      page.default.layout = page.default.layout || (Layout as Component);
+        page.default.layout = page.default.layout || (Layout as Component);
 
-      return page;
-    },
+        return page;
+      },
 
-    setup({ App, props, plugin }) {
-      return createSSRApp({ render: () => h(App, props) }).use(plugin);
-    }
-  }),
+      setup({ App, props, plugin }) {
+        return createSSRApp({ render: () => h(App, props) }).use(plugin);
+      },
+    }),
   // { cluster: true },
 );

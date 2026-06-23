@@ -16,7 +16,7 @@ class IndexController
         return $inertia
             ->title('Blogs')
             ->render('Blog/Index', [
-                'blogs' => Blog::query()->latest()->get()->mapInto(BlogSnippetResource::class),
+                'blogs' => Blog::query()->published()->latest()->get()->mapInto(BlogSnippetResource::class),
             ]);
     }
 }

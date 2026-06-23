@@ -7,11 +7,13 @@ namespace App\Http\Resources;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Override;
 
 /** @mixin Blog */
 class BlogResource extends JsonResource
 {
     /** @return array<string, mixed> */
+    #[Override]
     public function toArray(Request $request): array
     {
         return [

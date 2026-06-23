@@ -15,7 +15,21 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('home'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Home'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Home'));
+    }
+
+    #[Test]
+    public function it_passes_the_employment_history_and_photo_to_the_homepage(): void
+    {
+        $this->get(route('home'))
+            ->assertStatus(200)
+            ->assertInertia(
+                fn (Assert $page): Assert => $page
+                    ->component('Home')
+                    ->has('employment', 3)
+                    ->where('employment.0.company', 'Jump24')
+                    ->has('me')
+            );
     }
 
     #[Test]
@@ -23,7 +37,11 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('about'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('About'));
+            ->assertInertia(
+                fn (Assert $page): Assert => $page
+                    ->component('About')
+                    ->has('me')
+            );
     }
 
     #[Test]
@@ -31,7 +49,11 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('work'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Work'));
+            ->assertInertia(
+                fn (Assert $page): Assert => $page
+                    ->component('Work')
+                    ->has('employment', 3)
+            );
     }
 
     #[Test]
@@ -39,7 +61,7 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('uses'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Uses'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Uses'));
     }
 
     #[Test]
@@ -47,6 +69,6 @@ class PageLoadTest extends TestCase
     {
         $this->get(route('speaking'))
             ->assertStatus(200)
-            ->assertInertia(fn (Assert $page) => $page->component('Speaking'));
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Speaking'));
     }
 }

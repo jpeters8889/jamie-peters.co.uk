@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Blog } from '@/types/Blogs';
-import Card from '@/Components/Card.vue';
-import Heading from '@/Components/Heading.vue';
+import Section from '@/Components/Section.vue';
+import { Link } from '@inertiajs/vue3';
+import { ArrowLeftIcon } from '@heroicons/vue/24/solid';
 import { onMounted } from 'vue';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
@@ -19,18 +20,40 @@ onMounted(() => {
 </script>
 
 <template>
-  <Card>
-    <Heading>{{ blog.title }}</Heading>
+  <Section
+    tone="transparent"
+    spacing="sm"
+    width="narrow"
+  >
+    <Link
+      href="/blog"
+      prefetch
+      class="group inline-flex items-center gap-1.5 font-mono text-xs font-medium tracking-tight text-muted transition-colors hover:text-primary"
+    >
+      <ArrowLeftIcon
+        class="size-3.5 transition-transform duration-200 group-hover:-translate-x-0.5"
+      />
+      All articles
+    </Link>
 
-    <div
-      class="prose"
+    <header class="mt-8 border-b border-primary/10 pb-8">
+      <p
+        v-if="blog.date"
+        class="font-mono text-xs tracking-[0.2em] text-primary-500 uppercase"
+      >
+        {{ blog.date }}
+      </p>
+
+      <h1
+        class="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+        v-text="blog.title"
+      />
+    </header>
+
+    <article
+      class="prose mt-10"
       v-html="blog.body"
     />
-  </Card>
+  </Section>
 </template>
 
-<style>
-.line-numbers .line-numbers-rows {
-  left: -6em;
-}
-</style>

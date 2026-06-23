@@ -9,10 +9,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Override;
 
 class Blog extends Model
 {
@@ -20,9 +21,18 @@ class Blog extends Model
     use HasFactory;
     use HasSlug;
 
-    protected $casts = ['published' => 'bool'];
+    /** @return array<string, string> */
+    #[Override]
+    protected function casts(): array
+    {
+        return [
+            'published' => 'bool',
+            'external' => 'bool',
+        ];
+    }
 
-    public function getRouteKey()
+    #[Override]
+    public function getRouteKey(): string
     {
         return $this->slug;
     }
@@ -34,7 +44,7 @@ class Blog extends Model
             ->saveSlugsTo('slug');
     }
 
-    /** @return Attribute<Collection<int, string>, never> */
+    /** @return Attribute<Stringable, never> */
     public function body(): Attribute
     {
         return Attribute::get(fn (string $body) => Str::of($body)
@@ -42,9 +52,14 @@ class Blog extends Model
                 'renderer' => [
                     'soft_break' => '<br />',
                 ],
-            ])->replace('<?php', "&lt;?php"));
+            ])
+            ->replace('<?php', '&lt;?php')
+            // Collapse whitespace between <pre> and <code> so the first line of
+            // a code block isn't indented by the source HTML's formatting.
+            ->replaceMatches('/(<pre[^>]*>)\s+(<code)/', '$1$2'));
     }
 
+    #[Override]
     public function resolveRouteBinding($value, $field = null): self
     {
         return $this->newQuery()->where('slug', $value)
