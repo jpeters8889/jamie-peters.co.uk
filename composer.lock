@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ef393b8884a3a7b30b0aa6f3594536c",
+    "content-hash": "9c53960df42e399625b0421b9cca8cd3",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2241,6 +2241,63 @@
                 "source": "https://github.com/inertiajs/inertia-laravel/tree/v3.1.0"
             },
             "time": "2026-04-30T15:30:29+00:00"
+        },
+        {
+            "name": "jpeters8889/journey-tracker-laravel",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpeters8889/journey-tracker-laravel.git",
+                "reference": "b0500f4ce591c557d14f9da67893abd13c972cfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jpeters8889/journey-tracker-laravel/zipball/b0500f4ce591c557d14f9da67893abd13c972cfc",
+                "reference": "b0500f4ce591c557d14f9da67893abd13c972cfc",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^12.0|^13.0",
+                "php": "^8.3",
+                "spatie/laravel-package-tools": "^1.92"
+            },
+            "require-dev": {
+                "orchestra/testbench": "*",
+                "pestphp/pest": "*",
+                "pestphp/pest-plugin-laravel": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jpeters8889\\JourneyTrackerLaravel\\JourneyTrackerServiceProvider"
+                    ],
+                    "aliases": {
+                        "JourneyTracker": "Jpeters8889\\JourneyTrackerLaravel\\Facades\\JourneyTracker"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jpeters8889\\JourneyTrackerLaravel\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Jamie Peters",
+                    "email": "jamie@jamie-peters.co.uk"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/jpeters8889/journey-tracker-laravel/tree/v0.5.2",
+                "issues": "https://github.com/jpeters8889/journey-tracker-laravel/issues"
+            },
+            "time": "2026-05-17T13:05:28+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
