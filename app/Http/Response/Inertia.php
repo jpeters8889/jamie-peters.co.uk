@@ -8,6 +8,7 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia as BaseInertia;
 use Inertia\Response;
+use Jpeters8889\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware;
 
 class Inertia
 {
@@ -17,6 +18,8 @@ class Inertia
         BaseInertia::share('meta.title', config('metas.title'));
         BaseInertia::share('meta.image', Storage::disk('s3')->url('og-image.jpg'));
         BaseInertia::share('meta.currentUrl', request()->url());
+
+        BaseInertia::share('journey.token', fn (): ?string => LogPageViewMiddleware::getToken());
     }
 
     public function title(string $title): self
