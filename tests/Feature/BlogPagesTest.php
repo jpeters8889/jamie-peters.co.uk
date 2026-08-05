@@ -123,4 +123,37 @@ class BlogPagesTest extends TestCase
         $this->get(route('blog.show', $blog))
             ->assertRedirect('https://example.com/external-post');
     }
+
+    #[Test]
+    public function itRedirectsTheLegacyArticlesIndexToTheBlogIndex(): void
+    {
+        $response = $this->get('/articles')
+            ->assertStatus(301)
+            ->assertRedirect(route('blog.index'));
+
+        $this->assertSame('/blog', $response->headers->get('Location'));
+    }
+
+    #[Test]
+    public function itRedirectsALegacyArticleUrlToTheBlogUrl(): void
+    {
+        $blog = Blog::factory()->create();
+
+        $response = $this->get("/articles/{$blog->slug}")
+            ->assertStatus(301)
+            ->assertRedirect(route('blog.show', $blog));
+
+        $this->assertSame("/blog/{$blog->slug}", $response->headers->get('Location'));
+    }
+
+    #[Test]
+    public function itFollowsALegacyArticleRedirectThroughToTheBlogPost(): void
+    {
+        $blog = Blog::factory()->create();
+
+        $this->followingRedirects()
+            ->get("/articles/{$blog->slug}")
+            ->assertStatus(200)
+            ->assertInertia(fn (Assert $page): Assert => $page->component('Blog/Show'));
+    }
 }

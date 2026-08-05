@@ -18,6 +18,9 @@ Route::prefix('blog')->name('blog.')->group(function (): void {
     Route::get('/{blog}', BlogShowController::class)->name('show');
 });
 
+Route::permanentRedirect('articles', '/blog');
+Route::permanentRedirect('articles/{slug}', '/blog/{slug}');
+
 Route::get('speaking', SpeakingController::class)->name('speaking');
 Route::get('uses', UsesController::class)->name('uses');
 Route::get('work-and-projects', WorkController::class)->name('work');
